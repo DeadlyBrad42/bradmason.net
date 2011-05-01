@@ -1,0 +1,184 @@
+/****** BEGIN TRANSMISSION *******************************/
+
+
+
+/*
+style.css
+Brad Mason
+April 2011
+*/
+
+
+
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+html{
+  height: 100%;
+}
+
+body{
+  font-family: "Arial", sans-serif;
+  font-size: 1em;
+  color: #EDE7D5;
+  background-color: #2D2D2D;
+  background-image: url("img/bg.png");
+}
+
+h2, h3{
+  font-size: 1.5em;
+  color: #B7CC18;
+  text-shadow: 1px 1px 2px #828E11;
+  margin: 10px 0px;
+}
+
+h1{
+  color: #B7CC18;
+  text-shadow: 1px 1px 2px #828E11;
+  font-size: 4em;
+  margin: 0px 15px 0px;
+}
+
+a{
+  color: #7B8A84;
+  text-decoration: none;
+  border-bottom: 1px dotted;
+}
+
+a:hover{
+  color: #8CBFAF;
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
+
+#header{
+  background-color: #181818;
+  background-image: url("img/head_bg.png");
+  border-bottom: 3px solid #181818;
+}
+
+#header ul{
+  height: 60px;
+  line-height: 60px;
+  margin-left: 30px;
+}
+
+#header ul li{
+  font-family: "Monotype Corsiva", "Apple Chancery", "URW Chancery L", cursive;
+  font-style: italic;
+  font-size: 1.5em;
+  line-height: 60px;
+  list-style: none;
+  display: inline-block;
+  /* IE hack to get inline lists to work? I don't know why. */
+  *display: inline;
+  vertical-align: middle;
+  padding: auto 0px;
+}
+
+#header ul li.first:before{
+  font-family: monospace;
+  font-style: normal;
+  font-size: 3em;
+  color: #7B8A84;
+  font-weight:normal;
+  line-height: 60px;
+  vertical-align: middle;
+  content: "{";
+}
+
+#header ul li:after{
+  font-family: monospace;
+  font-style: normal;
+  font-size: 2em;
+  color: #7B8A84;
+  font-weight:normal;
+  line-height: 60px;
+  padding: auto 0px;
+  vertical-align: middle;
+  content: ",";
+}
+
+#header ul li.last:after{
+  font-family: monospace;
+  font-style: normal;
+  font-size: 3em;
+  color: #7B8A84;
+  font-weight:normal;
+  content: "}";
+}
+
+.content{
+  width: 1100px;
+  margin: 0px auto;
+}
+
+#pagebody{
+  margin-top: 100px;
+}
+
+#me{
+  width: 550px;
+  float: left;
+}
+
+.photo img{
+  margin: 10px;
+  border: 3px solid #181818;
+}
+
+#about{
+  width: 550px;
+  height: 353px;
+  float: right;
+  line-height: 175%;
+  position: relative;
+}
+
+#contact{
+  margin: 15px 20px;
+}
+
+ul#social{
+  line-height: 100%;
+  position: absolute;
+  bottom: 0px;
+}
+
+#social li{
+  width: 32px;
+  height: 32px;
+  min-height: 32px;
+  list-style: none;
+  display: inline;
+}
+
+#social li a{
+  width: 32px;
+  max-width: 32px;
+  height: 32px;
+  min-height: 32px;
+  text-indent: -3000px;
+  display: inline-block;
+  border: none;
+  padding: 0px;
+  margin: 5px;
+  /* Some other IE hack */
+  float: left;
+}
+
+/* Social media icons graciously stolen from: 
+ * Komodo Media
+ * http://www.komodomedia.com/blog/2009/06/social-network-icon-pack/
+ */
+#social #twitter a{background-image: url("img/ico/twitter.png");}
+#social #facebook a{background: url('img/ico/facebook.png');}
+#social #lastfm a{background-image: url("img/ico/lastfm.png");}
+#social #steepster a{background-image: url("img/ico/steepster.png");}
+#social #github a{background-image: url("img/ico/github.png");}
+
+
+
+/****** END TRANSMISSION *********************************/
