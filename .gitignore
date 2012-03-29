@@ -1,0 +1,5 @@
+# Ignore the archive of ancient versions
+@old/*
+
+# Ignore things that aren't ready yet
+*.wip.*
