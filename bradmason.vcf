@@ -1,20 +1,20 @@
 BEGIN:VCARD
 VERSION:2.1
 N:Mason;Brad;T
-FN:Brad Mason
+FN:Brad T Mason
 NICKNAME:Moose
-ORG:FMC Technologies, Inc.;Software
+ORG:FMC Technologies, Inc.;Software Engineering
 TITLE:Software Engineering Intern
-TEL;HOME;FAX:724.816.7786
+NOTE:Pretty cool dude.
+TEL;CELL;VOICE:724.816.7786
 ADR;WORK:;;1602 Wagner Avenue;Erie;PA;16510
 LABEL;WORK;ENCODING=QUOTED-PRINTABLE:1602 Wagner Avenue=0D=0AErie, PA 16510
-ADR;HOME:;;2516B Peach Street;Erie;PA;16502
-LABEL;HOME;ENCODING=QUOTED-PRINTABLE:2163 W22nd St.=0D=0AErie, PA 16506
+ADR;HOME:;;4124 Rickenbach Rd.;Gibsonia;PA;15044
+LABEL;HOME;ENCODING=QUOTED-PRINTABLE:4124 Rickenbach Rd.=0D=0AGibsonia, PA 15044
 X-WAB-GENDER:2
 URL;HOME:http://bradmason.net/
-URL;WORK:http://www.fmctechnologies.com/
+URL;WORK:http://fmctechnologies.com/
 BDAY:19871014
-EMAIL;PREF;INTERNET:bradtmason@gmail.com
-EMAIL;INTERNET:Brad.Mason@fmcti.com
-REV:20100705T083824Z
+EMAIL;PREF;INTERNET:BradTMason@gmail.com
+REV:20120329T144529Z
 END:VCARD

@@ -3,3 +3,6 @@
 
 # Ignore things that aren't ready yet
 *.wip.*
+
+# Temp files
+*.tmp

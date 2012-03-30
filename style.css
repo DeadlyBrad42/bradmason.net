@@ -1,14 +1,9 @@
-/****** BEGIN TRANSMISSION *******************************/
+/*******************************************************************************
+  style.css, by Brad Mason
+  Last updated April of 2012
+*******************************************************************************/
 
-
-
-/*
-style.css
-Brad Mason
-April 2011
-*/
-
-
+/****** Standard element styles ************************************************/
 
 *{
   margin: 0px;
@@ -17,28 +12,34 @@ April 2011
 
 html{
   height: 100%;
+  font-family: "Open Sans", Helvetica, Arial, Verdana, sans-serif;
+  font-size: 1.2em;
 }
 
 body{
-  font-family: "Arial", sans-serif;
-  font-size: 1em;
+  height: 100%;
   color: #EDE7D5;
-  background-color: #2D2D2D;
+  text-shadow: 1px 1px 1px #0F0F0F;
+  background-color: #252525;
   background-image: url("img/bg.png");
 }
 
-h2, h3{
-  font-size: 1.5em;
-  color: #B7CC18;
-  text-shadow: 1px 1px 2px #828E11;
-  margin: 10px 0px;
+p{
+  margin: 25px 0;
 }
 
 h1{
   color: #B7CC18;
-  text-shadow: 1px 1px 2px #828E11;
   font-size: 4em;
+  text-shadow: 1px 1px 2px #828E11;
   margin: 0px 15px 0px;
+}
+
+h2, h3{
+  color: #B7CC18;
+  font-size: 1.5em;
+  text-shadow: 1px 1px 2px #828E11;
+  margin: 10px 0px;
 }
 
 a{
@@ -53,99 +54,101 @@ a:hover{
   border-bottom: 1px solid;
 }
 
+/****** Custom element styles *************************************************/
+
+#wrapper{
+  min-height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
 #header{
-  background-color: #181818;
-  background-image: url("img/head_bg.png");
-  border-bottom: 3px solid #181818;
+  background-image: url("img/bg_dark.png");
+  border-bottom: 3px solid #0F0F0F;
+  clear: both;
 }
 
-#header ul{
-  height: 60px;
-  line-height: 60px;
-  margin-left: 30px;
-}
-
-#header ul li{
-  font-family: "Monotype Corsiva", "Apple Chancery", "URW Chancery L", cursive;
-  font-style: italic;
-  font-size: 1.5em;
-  line-height: 60px;
-  list-style: none;
-  display: inline-block;
-  /* IE hack to get inline lists to work? I don't know why. */
-  *display: inline;
-  vertical-align: middle;
-  padding: auto 0px;
-}
-
-#header ul li.first:before{
-  font-family: monospace;
-  font-style: normal;
-  font-size: 3em;
-  color: #7B8A84;
-  font-weight:normal;
-  line-height: 60px;
-  vertical-align: middle;
-  content: "{";
-}
-
-#header ul li:after{
-  font-family: monospace;
-  font-style: normal;
-  font-size: 2em;
-  color: #7B8A84;
-  font-weight:normal;
-  line-height: 60px;
-  padding: auto 0px;
-  vertical-align: middle;
-  content: ",";
-}
-
-#header ul li.last:after{
-  font-family: monospace;
-  font-style: normal;
-  font-size: 3em;
-  color: #7B8A84;
-  font-weight:normal;
-  content: "}";
-}
-
-.content{
+#header h1{
   width: 1100px;
-  margin: 0px auto;
+  margin: 0 auto;
 }
 
 #pagebody{
-  margin-top: 100px;
+  width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  clear: both;
 }
 
 #me{
-  width: 550px;
+  width: 330px;
+  margin: 1.5em 0;
   float: left;
 }
 
-.photo img{
+#about
+{
+  margin-bottom: 25px;
+}
+
+#projects
+{
+  margin-bottom: 25px;
+}
+
+.content{
+  max-width: 630px;
+  min-height: 80%;
+  margin: 1.5em 0;
+  float : right;
+}
+
+.pic img{
   margin: 10px;
-  border: 3px solid #181818;
+  border: 3px solid #0F0F0F;
 }
 
-#about{
-  width: 550px;
-  height: 353px;
-  float: right;
-  line-height: 175%;
-  position: relative;
-}
-
-#contact{
+ul#contact{
   margin: 15px 20px;
+  list-style: none;
+  display: inline;
 }
 
-ul#social{
-  line-height: 100%;
-  position: absolute;
-  bottom: 0px;
+ul#proj-list{
+  list-style: none;
+  padding-bottom: 5px;
 }
+
+#footer{
+  height: 50px;
+  min-height: 50px;
+  width: 100%;
+  background-image: url("img/bg_dark.png");
+  border-top: 3px solid #0F0F0F;
+  margin-top: 1.5em;
+  position: absolute;
+  bottom: 0;
+}
+
+#wrapper-footer{
+  width : 1100px;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+
+#footer ul{
+  float: left;
+}
+
+#footer a{
+  float: right;
+}
+
+/* Contact icons from Silk, by famfamfam (http://www.famfamfam.com/lab/icons/silk/) */
+ul#contact li{display: inline; padding-left: 24px; padding-right: 13px; }
+ul#contact li.contact-email{background: url("img/blips/contact_email.png") left center no-repeat; vertical-align: middle;}
+ul#contact li.contact-resume{background: url("img/blips/contact_resume.png") left center no-repeat; vertical-align: middle;}
+ul#contact li.contact-vcard{background: url("img/blips/contact_vcard.png") left center no-repeat; vertical-align: middle;}
 
 #social li{
   width: 32px;
@@ -163,22 +166,18 @@ ul#social{
   text-indent: -3000px;
   display: inline-block;
   border: none;
-  padding: 0px;
   margin: 5px;
-  /* Some other IE hack */
   float: left;
 }
 
-/* Social media icons graciously stolen from: 
- * Komodo Media
- * http://www.komodomedia.com/blog/2009/06/social-network-icon-pack/
- */
-#social #twitter a{background-image: url("img/ico/twitter.png");}
-#social #facebook a{background: url('img/ico/facebook.png');}
-#social #lastfm a{background-image: url("img/ico/lastfm.png");}
-#social #steepster a{background-image: url("img/ico/steepster.png");}
-#social #github a{background-image: url("img/ico/github.png");}
+/* Social icons from Social Media Icons set by Fine Goods (http://www.finegoodsmarket.com/product/basic-social-media-icons) */
+#social #twitter a{background-image: url("img/social/twitter.png"); background-repeat: no-repeat;}
+#social #facebook a{background-image: url("img/social/facebook.png"); background-repeat: no-repeat;}
+#social #gplus a{background-image: url("img/social/gplus.png"); background-repeat: no-repeat;}
+#social #github a{background-image: url("img/social/github.png"); background-repeat: no-repeat;}
+#social #lastfm a{background-image: url("img/social/lastfm.png"); background-repeat: no-repeat;}
+#social #openid a{background-image: url("img/social/openid.png"); background-repeat: no-repeat;}
 
+/****** Classes that can be sued anywhere *************************************/
 
-
-/****** END TRANSMISSION *********************************/
+/* FILETYPE ICONS HERE, HAT TIP TO SILK */
