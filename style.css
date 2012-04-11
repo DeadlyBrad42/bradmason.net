@@ -28,17 +28,28 @@ p{
   margin: 25px 0;
 }
 
-h1{
+h1, h2, h3, h4{
   color: #B7CC18;
-  font-size: 4em;
   text-shadow: 1px 1px 2px #828E11;
+}
+
+h1{
+  font-size: 4em;
   margin: 0px 15px 0px;
 }
 
-h2, h3{
-  color: #B7CC18;
+h2{
   font-size: 1.5em;
-  text-shadow: 1px 1px 2px #828E11;
+  margin: 10px 0px;
+}
+
+h3{
+  font-size: 1.25em;
+  margin: 10px 0px;
+}
+
+h4{
+  font-size: 1.0em;
   margin: 10px 0px;
 }
 
@@ -99,7 +110,8 @@ a:hover{
 .content{
   max-width: 630px;
   min-height: 80%;
-  margin: 1.5em 0;
+  /*margin: 1.5em 0;*/
+  padding: 1.5em 0;
   float : right;
 }
 
