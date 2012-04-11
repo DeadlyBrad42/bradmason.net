@@ -87,7 +87,7 @@ a:hover{
 #pagebody{
   width: 1000px;
   margin: 0 auto;
-  padding-bottom: 50px;
+  padding-bottom: 75px;
   clear: both;
 }
 
@@ -190,6 +190,27 @@ ul#contact li.contact-vcard{background: url("img/blips/contact_vcard.png") left 
 #social #lastfm a{background-image: url("img/social/lastfm.png"); background-repeat: no-repeat;}
 #social #openid a{background-image: url("img/social/openid.png"); background-repeat: no-repeat;}
 
-/****** Classes that can be sued anywhere *************************************/
+div#proj-links ul{
+  margin-left: 20px;
+}
 
-/* FILETYPE ICONS HERE, HAT TIP TO SILK */
+/****** Classes that can be used anywhere *************************************/
+
+/* Filetype icons from Silk set by famfamfam (http://www.famfamfam.com/lab/icons/silk/) */
+li.app.osx.cli{list-style-image: url("img/blips/app_osx_cli.png");}
+li.app.osx.gui{list-style-image: url("img/blips/app_osx_gui.png");}
+li.app.plugin{list-style-image: url("img/blips/app_plugin.png");}
+li.app.win.cli{list-style-image: url("img/blips/app_win_cli.png");}
+li.app.win.gui{list-style-image: url("img/blips/app_win_gui.png");}
+li.file.all{list-style-image: url("img/blips/file_all.png");}
+li.file.blank{list-style-image: url("img/blips/file_blank.png");}
+li.file.code{list-style-image: url("img/blips/file_code.png");}
+li.file.excel{list-style-image: url("img/blips/file_excel.png");}
+li.file.picture{list-style-image: url("img/blips/file_picture.png");}
+li.file.text{list-style-image: url("img/blips/file_text.png");}
+li.file.vs{list-style-image: url("img/blips/file_vs.png");}
+li.file.web{list-style-image: url("img/blips/file_web.png");}
+li.file.word{list-style-image: url("img/blips/file_word.png");}
+li.file.zip{list-style-image: url("img/blips/file_zip.png");}
+li.pay.btc{list-style-image: url("img/blips/pay_btc.png");}
+li.pay.ccard{list-style-image: url("img/blips/pay_ccard.png");}
