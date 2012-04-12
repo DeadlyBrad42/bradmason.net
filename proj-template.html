@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--
+
+ ____                _ __  __                                    _
+|  _ \              | |  \/  |                                  | |
+| |_) |_ __ __ _  __| | \  / | __ _ ___  ___  _ __    _ __   ___| |_
+|  _ <| '__/ _` |/ _` | |\/| |/ _` / __|/ _ \| '_ \  | '_ \ / _ \ __|
+| |_) | | | (_| | (_| | |  | | (_| \__ \ (_) | | | |_| | | |  __/ |_
+|____/|_|  \__,_|\__,_|_|  |_|\__,_|___/\___/|_| |_(_)_| |_|\___|\__|
+
+
+Lovingly handcrafted by me in notepad.exe, April 2012
+
+-->
+
+
+<html>
+<head>
+  
+  <!-- Meta data -->
+  <meta charset="UTF-8" />
+  <meta name="author" content="Brad Mason" />
+  <meta name="description" content="The personal website of Brad Mason, future Software Engineer." />
+  <meta name="robots" content="ALL" />
+  
+  <title>Brad Mason - Project Template</title>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" title="Style" type="text/css" media="screen" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans" type="text/css" media="screen" />
+  <link rel="stylesheet" href="css/fancyzoom.css" type="text/css" media="screen" />
+  
+  <!-- Favicon -->
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+  
+  <!-- JavaScript -->
+  <script src="js/jquery.js" type="text/javascript"></script>
+  <script src="js/jquery.fancyzoom.min.js" type="text/javascript"></script>
+  
+  <!-- Apply Gallery to photos -->
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $(".galleryimg a").fancyZoom();
+    });
+  </script>
+  
+  <!-- Google Analytics Code -->
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-2725384-2']);
+    _gaq.push(['_trackPageview']);
+    (function () {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = 'http://www.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  
+</head>
+<body id="page-top">
+
+
+
+<div id="wrapper">
+  
+  <div id="header">
+    <h1><a href="index.html">&laquo;Brad Mason</a></h1>
+  </div>
+  
+  <div id="pagebody">
+    <h2>Project Title</h2>
+    <div id="proj-screenshots">
+      <h3>Screenshots</h3>
+      <div class="galleryimg"><a href="img/projects/pixel_pipeline/output0.bmp" ><img src="img/projects/pixel_pipeline/output0.bmp" width="300" alt="desc" /></a></div>
+      <div class="galleryimg"><a href="img/projects/pixel_pipeline/output1.bmp" ><img src="img/projects/pixel_pipeline/output1.bmp" width="300" alt="desc" /></a></div>
+      <!--<div class="galleryimg"><a href="img/projects/pixel_pipeline/output2.bmp" ><img src="img/projects/pixel_pipeline/output2.bmp" width="300" alt="desc" /></a></div>-->
+      <!--<div class="galleryimg"><a href="img/projects/pixel_pipeline/output3.bmp" ><img src="img/projects/pixel_pipeline/output3.bmp" width="300" alt="desc" /></a></div>-->
+      <div class="galleryimg"><a href="img/projects/pixel_pipeline/output4.bmp" ><img src="img/projects/pixel_pipeline/output4.bmp" width="300" alt="desc" /></a></div>
+      <!--<div class="galleryimg"><a href="img/projects/pixel_pipeline/output5.bmp" ><img src="img/projects/pixel_pipeline/output5.bmp" width="300" alt="desc" /></a></div>-->
+      <div class="galleryimg"><a href="img/projects/pixel_pipeline/output6.bmp" ><img src="img/projects/pixel_pipeline/output6.bmp" width="300" alt="desc" /></a></div>
+      <div class="galleryimg"><a href="img/projects/pixel_pipeline/output7.bmp" ><img src="img/projects/pixel_pipeline/output7.bmp" width="300" alt="desc" /></a></div>
+    </div>
+    <div id="proj-about">
+      <h3>About</h3>
+      <p>Here's a paragraph explaining this project. It's probably a pretty good one!</p>
+      <p>You can even use code examples:</p>
+      <code>:(){ :|:&amp; };:</code>
+      <p>That's a fork bomb!</p>
+    </div>
+    <div id="proj-links">
+      <h3>Links</h3>
+      <ul>
+        <li>You can have a list of links</li>
+        <li>There's a bunch of different blips that you can put in as bullets</li>
+        <li class="osx app cli"><a href="#">OS X CLI</a></li>
+        <li class="osx app gui"><a href="#">OS X GUI</a></li>
+        <li class="win app cli"><a href="#">Windows CLI</a></li>
+        <li class="win app gui"><a href="#">Windows GUI</a></li>
+        <li class="file text"><a href="#">Text file</a></li>
+        <li class="file code"><a href="#">Code file</a></li>
+        <li class="file zip"><a href="#">Zip file</a></li>
+      </ul>
+    </div>
+    <!-- Disqus Comments code 
+    Note: This doesn't currently work
+    <div id="proj-comments">
+      <h3>Comments</h3>
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'bradmasonnet'; // required: replace example with your forum shortname
+        var disqus_developer = 1; // developer mode is on
+        var disqus_identifier = "test";
+        //var disqus_url = "gallerytest";
+        /*** DON'T EDIT BELOW THIS LINE ***/
+        (function () {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Comments available at <a href="http://disqus.com/?ref_noscript">Disqus</a>.</noscript>
+      <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span>.</a>
+    </div>-->
+  </div>
+  
+  <div id="footer">
+    <div id="wrapper-footer">
+      <ul id="social">
+        <li id="twitter"><a href="http://twitter.com/DeadlyBrad42">Twitter</a></li>
+        <li id="facebook"><a href="http://www.facebook.com/brad.t.mason">Facebook</a></li>
+        <li id="gplus"><a href="https://plus.google.com/108750017380280250631">Google+</a></li>
+        <li id="github"><a href="https://github.com/DeadlyBrad42">GitHub</a></li>
+        <li id="lastfm"><a href="http://www.last.fm/user/DeadlyBrad42">Last.fm</a></li>
+        <li id="openid"><a href="http://bradmason.name">OpenID</a></li>
+      </ul>
+      <a href="https://github.com/DeadlyBrad42/bradmason.net">#</a>
+    </div>
+  </div>
+  
+</div>
+
+
+
+</body>
+</html>
