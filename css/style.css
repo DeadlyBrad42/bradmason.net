@@ -220,6 +220,10 @@ div#proj-screenshots{
   overflow: hidden;
 }
 
+div#proj-screenshots a{
+  border-bottom: none;
+}
+
 /****** Classes that can be used anywhere *************************************/
 
 .galleryimg{
