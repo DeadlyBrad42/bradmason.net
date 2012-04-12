@@ -38,6 +38,11 @@ h1{
   margin: 0px 15px 0px;
 }
 
+h1 a, h1 a:hover{
+  color: #B7CC18;
+  border-bottom: none;
+}
+
 h2{
   font-size: 1.5em;
   margin: 10px 0px;
@@ -63,6 +68,16 @@ a:hover{
   color: #8CBFAF;
   text-decoration: none;
   border-bottom: 1px solid;
+}
+
+code{
+  color: #00FF00;
+  text-shadow: 1px 1px 2px #00AA00;
+  font: monospace;
+  background: #000000;
+  margin: 10px;
+  border: 3px solid #0F0F0F;
+  padding: 15px;
 }
 
 /****** Custom element styles *************************************************/
