@@ -209,7 +209,25 @@ div#proj-links ul{
   margin-left: 20px;
 }
 
+div#proj-screenshots , div#proj-about, div#proj-links, div#proj-comments{
+  clear: both;
+}
+
+div#proj-screenshots{
+  background-image: url("img/bg_dark.png");
+  padding: 10px;
+  border: 3px solid #0F0F0F;
+  overflow: hidden;
+}
+
 /****** Classes that can be used anywhere *************************************/
+
+.galleryimg{
+  float: left;
+  /*width: 325px;*/
+  padding: 10px;
+  vertical-align: middle;
+}
 
 /* Filetype icons from Silk set by famfamfam (http://www.famfamfam.com/lab/icons/silk/) */
 li.app.osx.cli{list-style-image: url("img/blips/app_osx_cli.png");}
