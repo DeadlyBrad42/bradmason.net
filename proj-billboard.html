@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <!--
 
- ____                _ __  __                                    _   
-|  _ \              | |  \/  |                                  | |  
-| |_) |_ __ __ _  __| | \  / | __ _ ___  ___  _ __    _ __   ___| |_ 
+ ____                _ __  __                                    _
+|  _ \              | |  \/  |                                  | |
+| |_) |_ __ __ _  __| | \  / | __ _ ___  ___  _ __    _ __   ___| |_
 |  _ <| '__/ _` |/ _` | |\/| |/ _` / __|/ _ \| '_ \  | '_ \ / _ \ __|
-| |_) | | | (_| | (_| | |  | | (_| \__ \ (_) | | | |_| | | |  __/ |_ 
+| |_) | | | (_| | (_| | |  | | (_| \__ \ (_) | | | |_| | | |  __/ |_
 |____/|_|  \__,_|\__,_|_|  |_|\__,_|___/\___/|_| |_(_)_| |_|\___|\__|
 
 
@@ -23,7 +23,7 @@ Lovingly handcrafted by me in notepad.exe, April 2012
   <meta name="description" content="The personal website of Brad Mason, future Software Engineer." />
   <meta name="robots" content="ALL" />
   
-  <title>Brad Mason</title>
+  <title>Brad Mason - Billboard</title>
   
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/style.css" title="Style" type="text/css" media="screen" />
@@ -32,10 +32,17 @@ Lovingly handcrafted by me in notepad.exe, April 2012
   
   <!-- Favicon -->
   <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
-
+  
   <!-- JavaScript -->
   <script src="js/jquery.js" type="text/javascript"></script>
   <script src="js/jquery.fancyzoom.min.js" type="text/javascript"></script>
+  
+  <!-- Apply Gallery to photos -->
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $(".galleryimg a").fancyZoom();
+    });
+  </script>
   
   <!-- Google Analytics Code -->
   <script type="text/javascript">
@@ -57,33 +64,27 @@ Lovingly handcrafted by me in notepad.exe, April 2012
 <div id="wrapper">
   
   <div id="header">
-    <h1>Brad Mason</h1>
+    <h1><a href="index.html">&laquo;Brad Mason</a></h1>
   </div>
   
-  
   <div id="pagebody">
-    <div class="pic" id="me">
-      <img src="img/me.jpg" width="300" alt="Brad Mason" />
+    <h2>Project Title</h2>
+    <div id="proj-screenshots">
+      <h3>Screenshots</h3>
+      <div class="galleryimg"><a href="img/projects/billboard/1.png" ><img src="img/projects/billboard/1.png" width="300" alt="desc" /></a></div>
+      <div class="galleryimg"><a href="img/projects/billboard/2.png" ><img src="img/projects/billboard/2.png" width="300" alt="desc" /></a></div>
+      
     </div>
-    <div class="content">
-      <div id="about">
-        <h2>About</h2>
-        <p>Hello there! I'm Brad Mason, a 24 year old software developer located in <a href="http://maps.google.com/maps?q=erie,+pa&amp;z=12">Erie, PA</a>. I am currently employed as a Software Engineering Intern at <a href="http://www.fmctechnologies.com/">FMC TEchnologies</a>.</p>
-        <p>In my spare time I like to <a href="https://github.com/DeadlyBrad42">build cool stuff</a>, <a href="http://codemoosey.com/">write about technology</a>, hang out with friends, and play <a href="http://live.xbox.com/en-US/Profile?gamertag=DeadlyBrad42">video</a> <a href="http://steamcommunity.com/id/DeadlyBrad42">games</a>.</p>
-        <ul id="contact">
-          <li class="contact-email"><a href="mailto:BradTMason@gmail.com">Email</a></li>
-          <li class="contact-resume"><a href="resume.pdf">R&eacute;sum&eacute;</a></li>
-          <li class="contact-vcard"><a href="bradmason.vcf">vCard</a></li>
-        </ul>
-      </div>
-      <div id="projects">
-        <h2>Projects</h2>
-        <ul id="proj-list">
-          <li><a href="proj-poof.html">Poof</a> &mdash; A command-line tool for storing and retreiving Imgur links.</li>
-          <li><a href="proj-billboard.html">Billboard</a> &mdash; An Android app that displays large text on screen.</li>
-          <li><a href="proj-pixel_pipeline.html">Pixel Pipeline</a> &mdash; A prototype raytracing program written in C++.</li>
-        </ul>
-      </div>
+    <div id="proj-about">
+      <h3>About</h3>
+      <p>Billboard is an Android app I worked on in 2011 to familiarize myself with the Android SDK. It's primary function is to display large text on the screen, which is actually more useful than it sounds.</p>
+      <p>Although the app itself is pretty simple I was able to learn a lot about how Android handles views and dialogs, interfaces with a SQLite database, and the basics of drawing to a screen using canvas. The app is open source, and will be available on Google Play as soon as I get the time to hunt down the remaining bugs.</p>
+    </div>
+    <div id="proj-links">
+      <h3>Links</h3>
+      <ul>
+        <li class="link"><a href="https://github.com/DeadlyBrad42/Billboard">Source code on GitHub</a></li>
+      </ul>
     </div>
   </div>
   
