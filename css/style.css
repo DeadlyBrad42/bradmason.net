@@ -21,7 +21,7 @@ body{
   color: #EDE7D5;
   text-shadow: 1px 1px 1px #0F0F0F;
   background-color: #252525;
-  background-image: url("img/bg.png");
+  background-image: url("../img/bg.png");
 }
 
 p{
@@ -89,7 +89,7 @@ code{
 }
 
 #header{
-  background-image: url("img/bg_dark.png");
+  background-image: url("../img/bg_dark.png");
   border-bottom: 3px solid #0F0F0F;
   clear: both;
 }
@@ -150,7 +150,7 @@ ul#proj-list{
   height: 50px;
   min-height: 50px;
   width: 100%;
-  background-image: url("img/bg_dark.png");
+  background-image: url("../img/bg_dark.png");
   border-top: 3px solid #0F0F0F;
   margin-top: 1.5em;
   position: absolute;
@@ -173,9 +173,9 @@ ul#proj-list{
 
 /* Contact icons from Silk, by famfamfam (http://www.famfamfam.com/lab/icons/silk/) */
 ul#contact li{display: inline; padding-left: 24px; padding-right: 13px; }
-ul#contact li.contact-email{background: url("img/blips/contact_email.png") left center no-repeat; vertical-align: middle;}
-ul#contact li.contact-resume{background: url("img/blips/contact_resume.png") left center no-repeat; vertical-align: middle;}
-ul#contact li.contact-vcard{background: url("img/blips/contact_vcard.png") left center no-repeat; vertical-align: middle;}
+ul#contact li.contact-email{background: url("../img/blips/contact_email.png") left center no-repeat; vertical-align: middle;}
+ul#contact li.contact-resume{background: url("../img/blips/contact_resume.png") left center no-repeat; vertical-align: middle;}
+ul#contact li.contact-vcard{background: url("../img/blips/contact_vcard.png") left center no-repeat; vertical-align: middle;}
 
 #social li{
   width: 32px;
@@ -198,12 +198,12 @@ ul#contact li.contact-vcard{background: url("img/blips/contact_vcard.png") left 
 }
 
 /* Social icons from Social Media Icons set by Fine Goods (http://www.finegoodsmarket.com/product/basic-social-media-icons) */
-#social #twitter a{background-image: url("img/social/twitter.png"); background-repeat: no-repeat;}
-#social #facebook a{background-image: url("img/social/facebook.png"); background-repeat: no-repeat;}
-#social #gplus a{background-image: url("img/social/gplus.png"); background-repeat: no-repeat;}
-#social #github a{background-image: url("img/social/github.png"); background-repeat: no-repeat;}
-#social #lastfm a{background-image: url("img/social/lastfm.png"); background-repeat: no-repeat;}
-#social #openid a{background-image: url("img/social/openid.png"); background-repeat: no-repeat;}
+#social #twitter a{background-image: url("../img/social/twitter.png"); background-repeat: no-repeat;}
+#social #facebook a{background-image: url("../img/social/facebook.png"); background-repeat: no-repeat;}
+#social #gplus a{background-image: url("../img/social/gplus.png"); background-repeat: no-repeat;}
+#social #github a{background-image: url("../img/social/github.png"); background-repeat: no-repeat;}
+#social #lastfm a{background-image: url("../img/social/lastfm.png"); background-repeat: no-repeat;}
+#social #openid a{background-image: url("../img/social/openid.png"); background-repeat: no-repeat;}
 
 div#proj-links ul{
   margin-left: 20px;
@@ -214,7 +214,7 @@ div#proj-screenshots , div#proj-about, div#proj-links, div#proj-comments{
 }
 
 div#proj-screenshots{
-  background-image: url("img/bg_dark.png");
+  background-image: url("../img/bg_dark.png");
   padding: 10px;
   border: 3px solid #0F0F0F;
   overflow: hidden;
@@ -230,21 +230,21 @@ div#proj-screenshots{
 }
 
 /* Filetype icons from Silk set by famfamfam (http://www.famfamfam.com/lab/icons/silk/) */
-li.app.osx.cli{list-style-image: url("img/blips/app_osx_cli.png");}
-li.app.osx.gui{list-style-image: url("img/blips/app_osx_gui.png");}
-li.app.plugin{list-style-image: url("img/blips/app_plugin.png");}
-li.app.win.cli{list-style-image: url("img/blips/app_win_cli.png");}
-li.app.win.gui{list-style-image: url("img/blips/app_win_gui.png");}
-li.file.all{list-style-image: url("img/blips/file_all.png");}
-li.file.blank{list-style-image: url("img/blips/file_blank.png");}
-li.file.code{list-style-image: url("img/blips/file_code.png");}
-li.file.excel{list-style-image: url("img/blips/file_excel.png");}
-li.file.picture{list-style-image: url("img/blips/file_picture.png");}
-li.file.text{list-style-image: url("img/blips/file_text.png");}
-li.file.vs{list-style-image: url("img/blips/file_vs.png");}
-li.file.web{list-style-image: url("img/blips/file_web.png");}
-li.file.word{list-style-image: url("img/blips/file_word.png");}
-li.file.zip{list-style-image: url("img/blips/file_zip.png");}
-li.link{list-style-image: url("img/blips/link.png");}
-li.pay.btc{list-style-image: url("img/blips/pay_btc.png");}
-li.pay.ccard{list-style-image: url("img/blips/pay_ccard.png");}
+li.app.osx.cli{list-style-image: url("../img/blips/app_osx_cli.png");}
+li.app.osx.gui{list-style-image: url("../img/blips/app_osx_gui.png");}
+li.app.plugin{list-style-image: url("../img/blips/app_plugin.png");}
+li.app.win.cli{list-style-image: url("../img/blips/app_win_cli.png");}
+li.app.win.gui{list-style-image: url("../img/blips/app_win_gui.png");}
+li.file.all{list-style-image: url("../img/blips/file_all.png");}
+li.file.blank{list-style-image: url("../img/blips/file_blank.png");}
+li.file.code{list-style-image: url("../img/blips/file_code.png");}
+li.file.excel{list-style-image: url("../img/blips/file_excel.png");}
+li.file.picture{list-style-image: url("../img/blips/file_picture.png");}
+li.file.text{list-style-image: url("../img/blips/file_text.png");}
+li.file.vs{list-style-image: url("../img/blips/file_vs.png");}
+li.file.web{list-style-image: url("../img/blips/file_web.png");}
+li.file.word{list-style-image: url("../img/blips/file_word.png");}
+li.file.zip{list-style-image: url("../img/blips/file_zip.png");}
+li.link{list-style-image: url("../img/blips/link.png");}
+li.pay.btc{list-style-image: url("../img/blips/pay_btc.png");}
+li.pay.ccard{list-style-image: url("../img/blips/pay_ccard.png");}
