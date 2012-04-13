@@ -2,8 +2,17 @@
 var secondsToWait = 1500;
 var animationLength = 1000;
 var timer;
+var complete;
 
 $(document).ready(function () {
+  complete = false;
+  
+  /* IE can't have nice things.
+  if($.browser.msie)
+  {
+    complete = true;
+  }*/
+  
   // Create the image that holds the specs
   $("<img />", {
     id: "specs",
@@ -30,12 +39,12 @@ $(document).ready(function () {
   // Hover functions
   $("div#me").hover(
   function () {
-  	// On hover-in
-  	startTimer();
+    // On hover-in
+    if(!complete) startTimer();
   },
   function () {
-  	// On hover-out
-  	stopTimer();
+    // On hover-out
+    if(!complete) stopTimer();
   });
 });
 
@@ -59,6 +68,7 @@ function timerTick(){
     complete: function () {
       // Animation complete
       $("#dwi").css("display", "inline");
+      complete = true;
     },
     step: function (now, fx) {
       if (fx.prop == "rotation") {
