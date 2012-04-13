@@ -58,7 +58,6 @@ function timerTick(){
 		},
 		step: function (now, fx) {
 			if (fx.prop == "rotation") {
-				console.log("rotating to " + now);
 				$(this).css({
 					"-webkit-transform": "rotate(" + now + "deg)",
 					"-moz-transform": "rotate(" + now + "deg)",
