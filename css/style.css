@@ -168,7 +168,9 @@ ul#proj-list{
 }
 
 #footer a{
+  border-bottom: none;
   float: right;
+  line-height: 42px;
 }
 
 /* Contact icons from Silk, by famfamfam (http://www.famfamfam.com/lab/icons/silk/) */
