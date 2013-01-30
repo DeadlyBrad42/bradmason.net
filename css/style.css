@@ -192,7 +192,10 @@ ul#contact li.contact-vcard{background: url("../img/blips/contact_vcard.png") le
   max-width: 32px;
   height: 32px;
   min-height: 32px;
-  text-indent: -3000px;
+  /* Kellum Method */
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
   display: inline-block;
   border: none;
   margin: 5px;
