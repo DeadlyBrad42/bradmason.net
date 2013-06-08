@@ -3,17 +3,13 @@ VERSION:2.1
 N:Mason;Brad;T
 FN:Brad T Mason
 NICKNAME:Moose
-ORG:KIT Solutions, LLC;Software Engineering
+ORG:Acatar;Software Engineering
 TITLE:Front-end Web Developer
 NOTE:Pretty cool dude.
 TEL;CELL;VOICE:724.816.7786
-ADR;WORK:;;5700 Corporate Drive;Pittsburgh;PA;15237
-LABEL;WORK;ENCODING=QUOTED-PRINTABLE:5700 Corporate Drive=0D=0APittsburgh, PA 15237
-ADR;HOME:;;4124 Rickenbach Rd.;Gibsonia;PA;15044
-LABEL;HOME;ENCODING=QUOTED-PRINTABLE:4124 Rickenbach Rd.=0D=0AGibsonia, PA 15044
 X-WAB-GENDER:2
 URL;HOME:http://bradmason.net/
-URL;WORK:http://www.kitsolutions.net/
+URL;WORK:http://www.acatar.com/
 BDAY:19871014
 EMAIL;PREF;INTERNET:BradTMason@gmail.com
 REV:20120329T144529Z
