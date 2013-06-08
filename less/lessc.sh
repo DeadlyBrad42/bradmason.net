@@ -1,0 +1,1 @@
+lessc -x --yui-compress style.less ../css/style.css
