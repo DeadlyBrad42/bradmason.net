@@ -3,9 +3,15 @@
   Last updated April of 2012
 *******************************************************************************/
 
-/****** Standard element styles ************************************************/
+/****** Variables *************************************************************/
+
+@clr_background:        #FFFFFF;
+@clr_text:              #000000;
+
+/****** Standard element styles ***********************************************/
 
 *{
+  /* Quick-n-dirty reset */
   margin: 0px;
   padding: 0px;
 }
@@ -21,7 +27,6 @@ body{
   color: #EDE7D5;
   text-shadow: 1px 1px 1px #0F0F0F;
   background-color: #252525;
-  background-image: url("../img/bg.png");
 }
 
 p{
@@ -43,19 +48,20 @@ h1 a, h1 a:hover{
   border-bottom: none;
 }
 
+h2, h3, h4{
+  margin: 10px 0px;
+}
+
 h2{
   font-size: 1.5em;
-  margin: 10px 0px;
 }
 
 h3{
   font-size: 1.25em;
-  margin: 10px 0px;
 }
 
 h4{
   font-size: 1.0em;
-  margin: 10px 0px;
 }
 
 a{
@@ -89,10 +95,9 @@ code{
 }
 
 #header{
-  background-image: url("../img/bg_dark.png");
   border-bottom: 3px solid #0F0F0F;
   clear: both;
-  
+
   h1{
     width: 1100px;
     margin: 0 auto;
@@ -104,6 +109,14 @@ code{
   margin: 0 auto;
   padding-bottom: 75px;
   clear: both;
+}
+
+ul.nav-list{
+  list-style: none;
+
+  li{
+    display: inline;
+  }
 }
 
 #me{
@@ -150,7 +163,6 @@ ul#proj-list{
   height: 50px;
   min-height: 50px;
   width: 100%;
-  background-image: url("../img/bg_dark.png");
   border-top: 3px solid #0F0F0F;
   margin-top: 1.5em;
   position: absolute;
@@ -217,7 +229,6 @@ div#proj-screenshots , div#proj-about, div#proj-links, div#proj-comments{
 }
 
 div#proj-screenshots{
-  background-image: url("../img/bg_dark.png");
   padding: 10px;
   border: 3px solid #0F0F0F;
   overflow: hidden;
