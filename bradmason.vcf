@@ -1,16 +1,18 @@
 BEGIN:VCARD
 VERSION:2.1
-N:Mason;Brad;T
-FN:Brad T Mason
+N:Mason;Brad
+FN:Brad Mason
 NICKNAME:Moose
-ORG:Acatar;Software Engineering
-TITLE:Front-end Web Developer
+ORG:Acatar;Engineering
+TITLE:Software Engineer
 NOTE:Pretty cool dude.
 TEL;CELL;VOICE:724.816.7786
+ADR;WORK;ENCODING=QUOTED-PRINTABLE:;;2100 Wharton St.=0D=0ASuite 625;Pittsburgh;PA;15203
+LABEL;WORK;ENCODING=QUOTED-PRINTABLE:2100 Wharton St.=0D=0ASuite 625=0D=0APittsburgh, PA 15203
 X-WAB-GENDER:2
 URL;HOME:http://bradmason.net/
 URL;WORK:http://www.acatar.com/
 BDAY:19871014
 EMAIL;PREF;INTERNET:BradTMason@gmail.com
-REV:20120329T144529Z
+REV:20130901T005309Z
 END:VCARD
