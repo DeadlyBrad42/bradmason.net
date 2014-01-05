@@ -5,67 +5,243 @@
 
 /****** Variables *************************************************************/
 
+@left_textColor:                #DEDEDE;
+@left_backgroundColor:          #252525;
+@right_textColor:               #343434;
 @right_backgroundColor:         #EEEEEE;
-@right_textColor:               #000000;
-@left_backgroundColor:          #EDE7D5;
-@left_textColor:                #FFFFFF;
+
+@avatar_radius_normal:          150px;
+@avatar_diameter_hover:           200px;
+@avatar_width:                  84px;
+@avatar_height:                 108px;
 
 /****** Standard element styles ***********************************************/
 
+/* Quick-n-dirty reset */
 *{
-  /* Quick-n-dirty reset */
   margin: 0px;
   padding: 0px;
+  ul { list-style-position: inside; }
 }
 
 html{
-  height: 100%;
   font-family: "Open Sans", Helvetica, Arial, Verdana, sans-serif;
-  font-size: 1.2em;
+  font-size: 1.35em;
+  line-height: 1.65em;
+  height: 100%;
 }
 
 body{
+  color: @right_textColor;
+  background-color: @right_backgroundColor;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.10);
   height: 100%;
-  color: #EEEEEE;
-  text-shadow: 1px 1px 1px #0F0F0F;
-  background-color: #252525;
 }
 
-h1{}
+h1, h2, h3, h4, h5, h6
+{
 
-h2{}
-
-h3{}
-
-h4{}
+}
 
 p{}
 
 a{
-  color: #7B8A84;
+  //TODO: Make it look pretty
   text-decoration: none;
-  border-bottom: 1px dotted;
+  position: relative;
+  border-bottom: 1px dotted blue;
+  .transition (border 0.75s);
+
+  &:after
+  {
+    content: "";
+    width: 0%;
+    height: 2px;
+    display: inline-block;
+    position: absolute;
+    bottom: -1.5px;
+    left: 0;
+    background-color: red;
+    margin-left: 50%;
+    margin-top: 1px;
+    .transition (~"width 0.5s, margin-left 0.5s");
+  }
+  &:hover{
+    //TODO: Change color
+    border-bottom: 1px dotted transparent;
+
+    &:after
+    {
+      width: 100%;
+      margin-left: 0%;
+    }
+  }
 }
 
-a:hover{
-  color: #8CBFAF;
-  text-decoration: none;
-  border-bottom: 1px solid;
-}
-
-/*code{
-  color: #00FF00;
-  text-shadow: 1px 1px 2px #00AA00;
-  font: monospace;
-  background: #000000;
-  margin: 10px;
-  border: 3px solid #0F0F0F;
-  padding: 15px;
-}*/
 
 /****** Custom element styles *************************************************/
+aside#meta, section#content
+{
+  padding: 1.0em 2.0em;
+}
+
+aside#meta
+{
+  color: @left_textColor;
+  background-color: @left_backgroundColor;
+  .box-sizing(border-box);
+  width: 30%;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+
+  header
+  {
+    .pic-circle
+    {
+      width: @avatar_radius_normal;
+      height: @avatar_radius_normal;
+      background-color: #02B1F1;
+      background-image: url('../img/bg.png');
+      background-repeat: repeat;
+      background-position: center center;
+      background-attachment: fixed;
+      margin: ((@avatar_diameter_hover - @avatar_radius_normal) / 2) auto;
+      border: 0.2em solid #FFFFFF;
+      .border-radius (50%);
+      overflow: hidden;
+      .transition (~"width 1s, height 1s, margin 1s");
+      .animation (animatedCircleBackground 15s linear infinite);
+      .animation-play-state (paused);
+
+      & > img
+      {
+        padding-top: ((@avatar_radius_normal - @avatar_height) / 2);
+        .transition (padding-top 1s);
+        .animation (animatedPictureFloat 1s linear infinite);
+        .animation-play-state (paused);
+      }
+
+      &:hover
+      {
+        width: @avatar_diameter_hover;
+        height: @avatar_diameter_hover;
+        margin: 0 auto;
+        .animation-play-state (running);
+
+        & > img
+        {
+          padding-top: (@avatar_diameter_hover - @avatar_height) / 2;
+          transition: padding-top 1s;
+          -webkit-transition: padding-top 1s;
+          .animation-play-state (running);
+        }
+      }
+    }
+  }
+
+  a
+  {
+    //color
+  }
+}
+
+section#content
+{
+  margin: 3.5em 0 0 30%;
+
+
+  & > div
+  {
+    margin-bottom: 7.0em;
+  }
+
+  &:after
+  {
+    content: "";
+    width: 75%;
+    display: block;
+    margin: -3.5em auto 3.5em;
+    border-bottom: 1px solid red;
+  }
+}
 
 
 
-/****** Component Classes *****************************************************/
+/****** Mixins and Animations *************************************************/
 
+.animation (@value) {
+  -webkit-animation: @value;
+  -moz-animation: @value;
+  -ms-animation: @value;
+  -o-animation: @value;
+  animation: @value;
+}
+
+.animation-play-state (@value) {
+  -webkit-animation-play-state: @value;
+  -moz-animation-play-state: @value;
+  -ms-animation-play-state: @value;
+  -o-animation-play-state: @value;
+  animation-play-state: @value;
+}
+
+.transition (@value) {
+  -webkit-transition: @value;
+  -moz-transition: @value;
+  -ms-transition: @value;
+  -o-transition: @value;
+  transition: @value;
+}
+
+.transition-delay (@value) {
+  -webkit-transition-delay: @value;
+  -moz-transition-delay: @value;
+  -ms-transition-delay: @value;
+  -o-transition-delay: @value;
+  transition-delay: @value;
+}
+
+.border-radius (@value) {
+  -webkit-border-radius: @value;
+  -moz-border-radius: @value;
+  -ms-border-radius: @value;
+  -o-border-radius: @value;
+  border-radius: @value;
+}
+
+.box-sizing (@value) {
+  -webkit-box-sizing: @value;
+  -moz-box-sizing: @value;
+  -ms-box-sizing: @value;
+  -o-box-sizing: @value;
+  box-sizing: @value;
+}
+
+@keyframes animatedCircleBackground {
+    0% { background-position: 0 0; }
+  100% { background-position: 100% 100% ; }
+}
+
+@-webkit-keyframes animatedCircleBackground {
+    0% { background-position: 0 0; }
+  100% { background-position: 100% 100% ; }
+}
+
+@keyframes animatedPictureFloat {
+    0% { padding-top: (@avatar_diameter_hover - @avatar_height) / 2; }
+   25% { padding-top: ((@avatar_diameter_hover - @avatar_height) / 2) + (@avatar_height / 8); }
+   50% { padding-top: (@avatar_diameter_hover - @avatar_height) / 2; }
+   75% { padding-top: ((@avatar_diameter_hover - @avatar_height) / 2) - (@avatar_height / 8); }
+  100% { padding-top: (@avatar_diameter_hover - @avatar_height) / 2; }
+}
+
+@-webkit-keyframes animatedPictureFloat {
+    0% { padding-top: ; }
+   25% { padding-top: ; }
+   50% { padding-top: ; }
+   75% { padding-top: ; }
+  100% { padding-top: ; }
+}
