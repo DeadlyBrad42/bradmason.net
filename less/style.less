@@ -11,7 +11,7 @@
 @right_backgroundColor:         #EEEEEE;
 
 @avatar_radius_normal:          150px;
-@avatar_diameter_hover:           200px;
+@avatar_diameter_hover:         175px;
 @avatar_width:                  84px;
 @avatar_height:                 108px;
 
@@ -120,8 +120,6 @@ aside#meta
       {
         padding-top: ((@avatar_radius_normal - @avatar_height) / 2);
         .transition (padding-top 1s);
-        .animation (animatedPictureFloat 1s linear infinite);
-        .animation-play-state (paused);
       }
 
       &:hover
@@ -135,8 +133,7 @@ aside#meta
         {
           padding-top: (@avatar_diameter_hover - @avatar_height) / 2;
           transition: padding-top 1s;
-          -webkit-transition: padding-top 1s;
-          .animation-play-state (running);
+          .animation (animatedPictureFloat 1s linear infinite);
         }
       }
     }
