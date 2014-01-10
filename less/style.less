@@ -48,8 +48,9 @@ p{}
 a{
   //TODO: Make it look pretty
   text-decoration: none;
-  position: relative;
   border-bottom: 1px dotted blue;
+  position: relative;
+  display: inline-block;
   .transition (border 0.75s);
 
   &:after
@@ -134,6 +135,7 @@ aside#meta
           padding-top: (@avatar_diameter_hover - @avatar_height) / 2;
           transition: padding-top 1s;
           .animation (animatedPictureFloat 1s linear infinite);
+          .animation-delay (1s);
         }
       }
     }
@@ -172,15 +174,20 @@ section#content
 .animation (@value) {
   -webkit-animation: @value;
   -moz-animation: @value;
-  -ms-animation: @value;
   -o-animation: @value;
   animation: @value;
+}
+
+.animation-delay (@value) {
+  -webkit-animation-delay: @value;
+  -moz-animation-delay: @value;
+  -o-animation-delay: @value;
+  animation-delay: @value;
 }
 
 .animation-play-state (@value) {
   -webkit-animation-play-state: @value;
   -moz-animation-play-state: @value;
-  -ms-animation-play-state: @value;
   -o-animation-play-state: @value;
   animation-play-state: @value;
 }
@@ -188,7 +195,6 @@ section#content
 .transition (@value) {
   -webkit-transition: @value;
   -moz-transition: @value;
-  -ms-transition: @value;
   -o-transition: @value;
   transition: @value;
 }
@@ -196,7 +202,6 @@ section#content
 .transition-delay (@value) {
   -webkit-transition-delay: @value;
   -moz-transition-delay: @value;
-  -ms-transition-delay: @value;
   -o-transition-delay: @value;
   transition-delay: @value;
 }
@@ -204,7 +209,6 @@ section#content
 .border-radius (@value) {
   -webkit-border-radius: @value;
   -moz-border-radius: @value;
-  -ms-border-radius: @value;
   -o-border-radius: @value;
   border-radius: @value;
 }
@@ -212,7 +216,6 @@ section#content
 .box-sizing (@value) {
   -webkit-box-sizing: @value;
   -moz-box-sizing: @value;
-  -ms-box-sizing: @value;
   -o-box-sizing: @value;
   box-sizing: @value;
 }
@@ -236,9 +239,9 @@ section#content
 }
 
 @-webkit-keyframes animatedPictureFloat {
-    0% { padding-top: ; }
-   25% { padding-top: ; }
-   50% { padding-top: ; }
-   75% { padding-top: ; }
-  100% { padding-top: ; }
+    0% { padding-top: (@avatar_diameter_hover - @avatar_height) / 2; }
+   25% { padding-top: ((@avatar_diameter_hover - @avatar_height) / 2) + (@avatar_height / 16); }
+   50% { padding-top: (@avatar_diameter_hover - @avatar_height) / 2; }
+   75% { padding-top: ((@avatar_diameter_hover - @avatar_height) / 2) - (@avatar_height / 16); }
+  100% { padding-top: (@avatar_diameter_hover - @avatar_height) / 2; }
 }
