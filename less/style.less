@@ -141,9 +141,31 @@ aside#meta
     }
   }
 
+  ul#nav-list
+  {
+    border-bottom: 1px dotted red;
+    border-top: 1px dotted red;
+    list-style: none outside none;
+
+    li
+    {
+      display: inline-block;
+    }
+  }
+
+  ul#social
+  {
+    list-style: none outside none;
+
+    li
+    {
+      display: inline-block;
+    }
+  }
+
   a
   {
-    //color
+    //color (if different from default)
   }
 }
 
@@ -165,6 +187,55 @@ section#content
     margin: -3.5em auto 3.5em;
     border-bottom: 1px solid red;
   }
+}
+
+
+
+/****** Icons & Fonts *********************************************************/
+
+@font-face {
+  font-family: 'glyphs';
+  src: url('fonts/glyphs.eot');
+  src: url('fonts/glyphs.eot?#iefix') format('embedded-opentype'),
+    url('fonts/glyphs.woff') format('woff'),
+    url('fonts/glyphs.ttf') format('truetype'),
+    url('fonts/glyphs.svg#glyphs') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+ul#social li
+{
+  font-family: 'glyphs';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  a
+  {
+    font-size: 0;                     // Hide the list's actual text
+    .ignore-default-link-style;
+
+    &:before
+    {
+      font-size: 16px;
+      display: block;
+      width: 24px;
+      height: 24px;
+      line-height: 24px;
+      background-color: orange;
+      .border-radius (50%);
+    }
+  }
+
+  &.twitter a:before{content: "\e600";}
+  &.github a:before{content: "\e601";}
+  &.tumblr a:before{content: "\e602";}
 }
 
 
@@ -218,6 +289,21 @@ section#content
   -moz-box-sizing: @value;
   -o-box-sizing: @value;
   box-sizing: @value;
+}
+
+.ignore-default-link-style
+{
+  // Used to override the default linking style
+  border-bottom: none;
+  .transition (all 0 ease 0);
+  &:after { display: none; }
+}
+
+.user-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 @keyframes animatedCircleBackground {
