@@ -1,6 +1,6 @@
 /*******************************************************************************
   style.css, by Brad Mason
-  Last updated January 2014
+  Last updated March 2014
 *******************************************************************************/
 
 /****** Variables *************************************************************/
@@ -14,6 +14,8 @@
 @avatar_diameter_hover:         175px;
 @avatar_width:                  84px;
 @avatar_height:                 108px;
+
+@social_size:                   50px;
 
 /****** Standard element styles ***********************************************/
 
@@ -160,12 +162,46 @@ aside#meta
     li
     {
       display: inline-block;
+
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      display: inline-block;
+      width: @social_size;
+      height: @social_size;
+      line-height: @social_size;
+      background-color: orange;
+      .border-radius (50%);
+
+      a
+      {
+        font-size: 0;                     // Hide the list's actual text
+          color: #00FF00;
+        .ignore-default-link-style;
+
+        &:before
+        {
+          color: #0000FF;
+          font-size: (@social_size - 20px);
+          speak: none;
+        }
+      }
+
+      &.twitter a:before{content: "\e600";}
+      &.github a:before{content: "\e601";}
+      &.tumblr a:before{content: "\e602";}
     }
   }
 
+
+
   a
-  {
-    //color (if different from default)
+  
+{    //color (if different from default)
   }
 }
 
@@ -207,35 +243,6 @@ section#content
 ul#social li
 {
   font-family: 'glyphs';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  
-  a
-  {
-    font-size: 0;                     // Hide the list's actual text
-    .ignore-default-link-style;
-
-    &:before
-    {
-      font-size: 16px;
-      display: block;
-      width: 24px;
-      height: 24px;
-      line-height: 24px;
-      background-color: orange;
-      .border-radius (50%);
-    }
-  }
-
-  &.twitter a:before{content: "\e600";}
-  &.github a:before{content: "\e601";}
-  &.tumblr a:before{content: "\e602";}
 }
 
 
