@@ -1,4 +1,4 @@
-# Ignore the archive of ancient versions
+# Ignore the Archive of Ancient Versions
 @old/*
 
 # Ignore things that aren't ready yet
@@ -6,6 +6,7 @@
 
 # Temp files
 *.tmp
+*.temp
 
 # That thing where MS Office leaves weird temp files all over the place
 ~*.doc
