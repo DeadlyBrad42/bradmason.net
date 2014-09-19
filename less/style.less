@@ -1,9 +1,12 @@
 /*******************************************************************************
   style.css, by Brad Mason
-  Last updated March 2014
+  Last updated August 2014
 *******************************************************************************/
 
 /****** Variables *************************************************************/
+
+@left_colWidth:                 30%;
+@right_colWidth:                100% - @left_colWidth;
 
 @left_textColor:                #DEDEDE;
 @left_backgroundColor:          #252525;
@@ -93,7 +96,7 @@ aside#meta
   color: @left_textColor;
   background-color: @left_backgroundColor;
   .box-sizing(border-box);
-  width: 30%;
+  width: @left_colWidth;
   text-align: center;
   position: fixed;
   top: 0;
@@ -200,14 +203,14 @@ aside#meta
 
 
   a
-  
-{    //color (if different from default)
+  {
+    //color (if different from default)
   }
 }
 
 section#content
 {
-  margin: 3.5em 0 0 30%;
+  margin: 3.5em 0 0 @left_colWidth;
 
 
   & > div
