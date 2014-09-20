@@ -17,8 +17,10 @@
 @avatar_diameter_hover:         175px;
 @avatar_width:                  84px;
 @avatar_height:                 108px;
+@avatar_margin_topbottom:       50px;
 
 @social_size:                   50px;
+@social_margin:                 50px;
 @social_color:                  #FFFFFF;
 @social_bgcolor_twitter:        #00AAFF;
 @social_bgcolor_git:            #FF2464;
@@ -93,7 +95,7 @@ a{
 /****** Custom element styles *************************************************/
 aside#meta, section#content
 {
-  padding: 1.0em 2.0em;
+  //padding: 1.0em 2.0em;
 }
 
 aside#meta
@@ -107,6 +109,7 @@ aside#meta
   top: 0;
   bottom: 0;
   left: 0;
+  padding: 2.0em 2.0em;
 
   header
   {
@@ -119,7 +122,7 @@ aside#meta
       background-repeat: repeat;
       background-position: center center;
       background-attachment: fixed;
-      margin: ((@avatar_diameter_hover - @avatar_radius_normal) / 2) auto;
+      margin: (((@avatar_diameter_hover - @avatar_radius_normal) / 2) + @avatar_margin_topbottom) auto;
       border: 0.2em solid #FFFFFF;
       .border-radius (50%);
       overflow: hidden;
@@ -137,7 +140,7 @@ aside#meta
       {
         width: @avatar_diameter_hover;
         height: @avatar_diameter_hover;
-        margin: 0 auto;
+        margin: @avatar_margin_topbottom auto;
         .animation-play-state (running);
 
         & > img
@@ -156,20 +159,24 @@ aside#meta
     border-bottom: 1px dotted @right_textColor;
     border-top: 1px dotted @right_textColor;
     list-style: none outside none;
+    margin: @social_margin auto;
 
     li
     {
       display: inline-block;
+      margin: 10px 5px;
     }
   }
 
   ul#social
   {
     list-style: none outside none;
+    margin: @social_margin auto;
 
     li
     {
       display: inline;
+      margin: 5px 5px;
 
       a
       {
@@ -224,8 +231,8 @@ aside#meta
 
 section#content
 {
-  margin: 3.5em 0 0 @left_colWidth;
-
+  margin: 2.5em 0 0 @left_colWidth;
+  padding: 1.0em 2.0em;
 
   & > div
   {
@@ -332,12 +339,12 @@ ul#social li
 
 @keyframes animatedCircleBackground {
     0% { background-position: 0 0; }
-  100% { background-position: 100% 100% ; }
+  100% { background-position: 100% 100%; }
 }
 
 @-webkit-keyframes animatedCircleBackground {
     0% { background-position: 0 0; }
-  100% { background-position: 100% 100% ; }
+  100% { background-position: 100% 100%; }
 }
 
 @keyframes animatedPictureFloat {
