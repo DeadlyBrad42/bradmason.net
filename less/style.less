@@ -103,7 +103,6 @@ aside#meta
 {
   color: @left_textColor;
   background-color: @left_backgroundColor;
-  .box-sizing(border-box);
   width: @left_colWidth;
   text-align: center;
   position: fixed;
@@ -111,6 +110,7 @@ aside#meta
   bottom: 0;
   left: 0;
   padding: 2.0em 2.0em;
+  .box-sizing(border-box);
 
   header
   {
@@ -125,8 +125,8 @@ aside#meta
       background-attachment: fixed;
       margin: (((@avatar_diameter_hover - @avatar_radius_normal) / 2) + @avatar_margin_topbottom) auto;
       border: 0.2em solid #FFFFFF;
-      .border-radius (50%);
       overflow: hidden;
+      .border-radius (50%);
       .transition (~"width 1s, height 1s, margin 1s");
       .animation (animatedCircleBackground 15s linear infinite);
       .animation-play-state (paused);
@@ -194,7 +194,6 @@ aside#meta
         height: @social_size;
         line-height: @social_size;
         font-size: 0;                     // Hide the list's actual text
-
         .border-radius (50%);
         .ignore-default-link-style;
 
@@ -209,16 +208,19 @@ aside#meta
       &.twitter a
       {
         background-color: @social_bgcolor_twitter;
+
         &:before{content: "\e600";}
       }
       &.github a
       {
         background-color: @social_bgcolor_git;
+
         &:before{content: "\e601";}
       }
       &.tumblr a
       {
         background-color: @social_bgcolor_blog;
+
         &:before{content: "\e602";}
       }
     }
@@ -328,6 +330,7 @@ ul#social li
   // Used to override the default linking style
   border-bottom: none;
   .transition (all 0 ease 0);
+
   &:after { display: none; }
 }
 
