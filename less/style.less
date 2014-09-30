@@ -251,6 +251,9 @@ section#content
   .showcase-list
   {
     list-style: none;
+    color: #FFF;
+
+    @border-radius: 25px;
 
     li
     {
@@ -260,16 +263,19 @@ section#content
       height: 450px;
       background-position: 0px -230px;
       position: relative;
-      border-radius: 20px;
+      border-radius: @border-radius;
 
       .showcase-header
       {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: @border-radius / 2;
         clear: both;
+        border-top-left-radius: @border-radius;
+        border-top-right-radius: @border-radius;
         position: absolute;
         top: 0px;
         left: 0px;
         right: 0px;
-        background-color: rgba(0, 0, 0, 0.5);
 
         h3 { float: left; }
         time { float: right; }
@@ -277,12 +283,15 @@ section#content
 
       .showcase-footer
       {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: @border-radius / 2;
         clear: both;
+        border-bottom-left-radius: @border-radius;
+        border-bottom-right-radius: @border-radius;
         position: absolute;
         bottom: 0px;
         left: 0px;
         right: 0px;
-        background-color: rgba(0, 0, 0, 0.5);
 
         h4 { display: inline; float: left; }
         .btn-group { float: right; }
@@ -291,7 +300,6 @@ section#content
     }
   }
 }
-
 
 
 /****** Fonts & Icons *********************************************************/
@@ -311,7 +319,6 @@ ul#social li
 {
   font-family: 'glyphs';
 }
-
 
 
 /****** Mixins and Animations *************************************************/
