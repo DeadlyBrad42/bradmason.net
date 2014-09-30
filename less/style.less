@@ -255,10 +255,38 @@ section#content
     li
     {
       margin-bottom: 1em;
+      background-image: url('../img/projects/prison_break/prisonbreak.png');
+      background-size: cover;
+      height: 450px;
+      background-position: 0px -230px;
+      position: relative;
+      border-radius: 20px;
 
-      h3
+      .showcase-header
       {
-        padding: 0.25em 0;
+        clear: both;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        background-color: rgba(0, 0, 0, 0.5);
+
+        h3 { float: left; }
+        time { float: right; }
+      }
+
+      .showcase-footer
+      {
+        clear: both;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        background-color: rgba(0, 0, 0, 0.5);
+
+        h4 { display: inline; float: left; }
+        .btn-group { float: right; }
+        p { clear: both; }
       }
     }
   }
@@ -266,7 +294,7 @@ section#content
 
 
 
-/****** Icons & Fonts *********************************************************/
+/****** Fonts & Icons *********************************************************/
 
 @font-face {
   font-family: 'glyphs';
