@@ -263,13 +263,14 @@ ul.showcase-list
 
   li
   {
-    margin-bottom: 1em;
-    background-image: url('../img/projects/prison_break/prisonbreak.png');
-    background-size: cover;
-    height: 450px;
-    background-position: 0px -230px;
+    height: 500px;
     position: relative;
+    background-image: url('');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #FF0000;
     border-radius: @border-radius;
+    margin-bottom: 1em;
 
     .showcase-header
     {
@@ -300,8 +301,22 @@ ul.showcase-list
       right: 0px;
 
       h4 { display: inline; float: left; }
-      .btn-group { float: right; }
       p { clear: both; }
+      .btn-group { float: right; }
+    }
+
+    &#game-PrisonBreak
+    {
+      background-image: url('../img/projects/prison_break/prisonbreak.png');
+      background-color: #A8B0B8;
+      background-size: 100% auto;
+    }
+
+    &#projects-CopyPad
+    {
+      background-image: url('../img/projects/copypad/copypad.png');
+      background-color: #339767;
+      background-size: 100% auto;
     }
   }
 }
