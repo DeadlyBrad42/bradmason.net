@@ -13,7 +13,7 @@
 @right_textColor:               #343434;
 @right_backgroundColor:         #EEEEEE;
 
-@avatar_diameter_normal:          150px;
+@avatar_diameter_normal:        150px;
 @avatar_diameter_hover:         175px;
 @avatar_width:                  84px;
 @avatar_height:                 108px;
@@ -126,13 +126,13 @@ aside#meta
     overflow: hidden;
     .border-radius (50%);
     .transition (~"width 1s, height 1s, margin 1s");
-    .animation (animatedCircleBackground 15s linear infinite);
+    .animation (~"animatedCircleBackground 15s linear infinite");
     .animation-play-state (paused);
 
     & > img
     {
       padding-top: ((@avatar_diameter_normal - @avatar_height) / 2);
-      .transition (padding-top 1s);
+      .transition (~"padding-top 1s");
     }
 
     &:hover
@@ -146,7 +146,7 @@ aside#meta
       {
         padding-top: (@avatar_diameter_hover - @avatar_height) / 2;
         transition: padding-top 1s;
-        .animation (animatedPictureFloat 1s linear infinite);
+        .animation (~"animatedPictureFloat 1s linear infinite");
         .animation-delay (1s);
       }
     }
