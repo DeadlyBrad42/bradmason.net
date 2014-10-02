@@ -5,8 +5,8 @@
 
 /****** Variables *************************************************************/
 
-@left_colWidth:                 30%;
-@right_colWidth:                100% - @left_colWidth;
+@left_colWidth:                 350px;
+@right_colMaxWidth:             900px;
 
 @left_textColor:                #DEDEDE;
 @left_backgroundColor:          #252525;
@@ -94,9 +94,9 @@ a{
 
 
 /****** Custom element styles *************************************************/
-aside#meta, section#content
+div#wrapper
 {
-  //padding: 1.0em 2.0em;
+  padding-left: @left_colWidth;
 }
 
 aside#meta
@@ -231,8 +231,9 @@ aside#meta
 
 section#content
 {
-  margin: 2.5em 0 0 @left_colWidth;
+  margin: 2.5em auto 0 auto;
   padding: 1.0em 2.0em;
+  max-width: @right_colMaxWidth;
 
   & > div
   {
@@ -253,7 +254,7 @@ section#content
     list-style: none;
     color: #FFF;
 
-    @border-radius: 25px;
+    @border-radius: 15px;
 
     li
     {
