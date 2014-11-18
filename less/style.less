@@ -257,73 +257,16 @@ header .pic-circle
 ul.showcase-list
 {
   list-style: none;
-  color: #FFF;
-
-  @border-radius: 15px;
 
   li
   {
-    height: 500px;
-    position: relative;
-    background-image: url('');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: #FF0000;
-    border-radius: @border-radius;
     margin-bottom: 1em;
 
-    .showcase-header
+    img
     {
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: @border-radius / 2;
-      clear: both;
-      border-top-left-radius: @border-radius;
-      border-top-right-radius: @border-radius;
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      right: 0px;
-
-      h3 { float: left; }
-      time { float: right; }
-    }
-
-    .showcase-footer
-    {
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: @border-radius / 2;
-      clear: both;
-      border-bottom-left-radius: @border-radius;
-      border-bottom-right-radius: @border-radius;
-      position: absolute;
-      bottom: 0px;
-      left: 0px;
-      right: 0px;
-
-      h4 { display: inline; float: left; }
-      p { clear: both; }
-      .btn-group { float: right; }
-    }
-
-    &#game-PrisonBreak
-    {
-      background-image: url('../img/projects/prison_break/prisonbreak.png');
-      background-color: #A8B0B8;
-      background-size: 100% auto;
-    }
-
-    &#projects-CopyPad
-    {
-      background-image: url('../img/projects/copypad/copypad.png');
-      background-color: #339767;
-      background-size: 100% auto;
-    }
-
-    &#projects-SpriteStitcher
-    {
-      background-image: url('../img/projects/stitcher/stitcher.png');
-      background-color: #1E2229;
-      background-size: 100% auto;
+      width: 200px;
+      height: 200px;
+      float: left;
     }
   }
 }
