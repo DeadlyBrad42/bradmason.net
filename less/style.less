@@ -55,6 +55,10 @@ h1//, h2, h3, h4, h5, h6
   font-size: 1.75em;
   line-height: 100%;
 }
+h2
+{
+  margin-bottom: 0.25em;
+}
 
 p{}
 
@@ -260,14 +264,23 @@ ul.showcase-list
 
   li
   {
-    margin-bottom: 1em;
+    margin: 1em 0;
 
-    img
+    .proj-img
     {
       width: 250px;
       height: 250px;
-      margin: 10px 10px 10px 0;
+      border: 1px solid @right_textColor;
       float: left;
+      overflow: hidden;
+
+      img
+      {
+        width: 100%;
+        height: 100%;
+        transform: scale(1.0, 1.0) rotate(.00001deg); // rotation transform fixes issues with Firefox's terrible image resizing
+        .transition (~"transform 1s");
+      }
     }
 
     h3, time, div
@@ -280,6 +293,18 @@ ul.showcase-list
       font-style: italic;
       display: block;
     }
+
+    &:hover span.proj-img img{
+      transform: scale(1.5, 1.5) rotate(.00001deg); // rotation transform fixes issues with Firefox's terrible image resizing
+    }
+  }
+}
+
+.btn-group
+{
+  .btn
+  {
+    margin-right: 0.5em;
   }
 }
 
