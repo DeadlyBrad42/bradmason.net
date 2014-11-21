@@ -1,6 +1,6 @@
 /*******************************************************************************
   style.less, by Brad Mason
-  Last updated September 2014
+  Last updated December 2014
 *******************************************************************************/
 
 /****** Variables *************************************************************/
@@ -19,8 +19,9 @@
 @avatar_height:                 108px;
 @avatar_margin_topbottom:       50px;
 
+@left_verticalMargin:           50px;
 @social_size:                   50px;
-@social_margin:                 50px;
+@social_size_hover:             @social_size + 10px;
 @social_color:                  #FFFFFF;
 @social_bgcolor_twitter:        #00AAFF;
 @social_bgcolor_git:            #FF2464;
@@ -122,7 +123,7 @@ aside#meta
     border-bottom: 1px dotted @right_textColor;
     border-top: 1px dotted @right_textColor;
     list-style: none outside none;
-    margin: @social_margin auto;
+    margin: @left_verticalMargin auto;
 
     li
     {
@@ -134,12 +135,11 @@ aside#meta
   ul#social
   {
     list-style: none outside none;
-    margin: @social_margin auto;
+    margin: @left_verticalMargin auto;
 
     li
     {
       display: inline;
-      margin: 5px 5px;
 
       a
       {
@@ -148,7 +148,6 @@ aside#meta
         font-weight: normal;
         font-variant: normal;
         text-transform: none;
-        line-height: 1;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         display: inline-block;
@@ -156,14 +155,24 @@ aside#meta
         height: @social_size;
         line-height: @social_size;
         font-size: 0;                     // Hide the list's actual text
-        .border-radius (50%);
+        margin: (@social_size_hover - @social_size) / 2;
         .ignore-default-link-style;
+        .transition (~"width 0.5s ease, height 0.5s ease, line-height 0.5s ease, margin 0.5s ease");
+        .border-radius (50%);
 
         &:before
         {
           color: @social_color;
           font-size: (@social_size - 20px);
           speak: none;
+        }
+
+        &:hover
+        {
+          width: @social_size_hover;
+          height: @social_size_hover;
+          line-height: @social_size_hover;
+          margin: 0px;
         }
       }
 
@@ -394,7 +403,7 @@ ul#social li
   &:after { display: none; }
 }
 
-.user-select {
+.disable-user-select {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
