@@ -143,6 +143,8 @@ aside#meta
 
       a
       {
+        .ignore-default-link-style;
+
         display: inline-block;
         font-style: normal;
         font-weight: normal;
@@ -156,7 +158,6 @@ aside#meta
         line-height: @social_size;
         font-size: 0;                     // Hide the list's actual text
         margin: (@social_size_hover - @social_size) / 2;
-        .ignore-default-link-style;
         .transition (~"width 0.5s ease, height 0.5s ease, line-height 0.5s ease, margin 0.5s ease");
         .border-radius (50%);
 
@@ -292,7 +293,7 @@ ul.showcase-list
       }
     }
 
-    h3, time, div
+    h3, time, div, ul
     {
       margin-left: (250px + 10px);
     }
@@ -315,11 +316,27 @@ ul.showcase-list
   }
 }
 
-.btn-group
+ul.btn-group
 {
+  list-style: none;
+
+  li {
+    display: inline;
+
+    &:first-child a { margin-left: 0; }
+  }
+
   .btn
   {
-    margin-right: 0.5em;
+    .ignore-default-link-style;
+
+    color: @right_textColor;
+    padding: 5px;
+    margin: 5px;
+    border: 3px solid @right_textColor;
+    .border-radius(5px);
+
+    &:visited { color: @right_textColor; }
   }
 }
 
@@ -397,7 +414,7 @@ ul#social li
 .ignore-default-link-style
 {
   // Used to override the default linking style
-  border-bottom: none;
+  border: initial;
   .transition (all 0 ease 0);
 
   &:after { display: none; }
