@@ -1,28 +1,35 @@
-(function($, sammy){
+(function($, sammy, analytics){
 	// initialize the application
 	var app = $.sammy('#content', function() {
 
 		this.get('/', function() {
-			this.$element().html('A new route! (default)');
-			//redirect('/about');
+			loadContent('#about', this.$element());
+			analytics('/');
 		});
 
-		this.get('/about', function() {
-			this.$element().html('A new route! (about)');
+		this.get('/#about', function() {
+			loadContent('#about', this.$element());
+			analytics('/#about');
 		});
 
-		this.get('/games', function() {
-			this.$element().html('A new route! (games)');
+		this.get('/#games', function() {
+			loadContent('#games', this.$element());
+			analytics('/#games');
 		});
 
-		this.get('/projects', function() {
-			this.$element().html('A new route! (projects)');
+		this.get('/#projects', function() {
+			loadContent('#projects', this.$element());
+			analytics('/#projects');
 		});
+
+		var loadContent = function(source, $destination) {
+			$destination.html($(source).html());
+		}
 	});
 
 	$(function(){
 		// start the application
+		//console.log('starting sammy...');
 		app.run('/');
-		console.log('starting sammy...');
 	});
-})(jQuery, Sammy);
+})(jQuery, Sammy, gaLog);
