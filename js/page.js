@@ -29,7 +29,6 @@
 
 	$(function(){
 		// start the application
-		//console.log('starting sammy...');
 		app.run('/');
 
 		console.log("Hello there! If you're here to read the source, it might be easier to do that over at https://github.com/DeadlyBrad42/bradmason.net :)");
