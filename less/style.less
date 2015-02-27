@@ -64,9 +64,9 @@ h2 {
 p {}
 
 a {
-  //TODO: Make it look pretty
   text-decoration: none;
-  border-bottom: 1px dotted blue;
+  color: @right_textColor;
+  border-bottom: 1px dotted @right_textColor;
   position: relative;
   display: inline-block;
   .transition (border 0.5s);
@@ -79,13 +79,12 @@ a {
     position: absolute;
     bottom: -1.5px;
     left: 0;
-    background-color: red;
+    background-color: @right_textColor;
     margin-left: 50%;
     margin-top: 1px;
     .transition (~"width 0.5s, margin-left 0.5s");
   }
   &:hover {
-    //TODO: Change color
     border-bottom: 1px dotted transparent !important;
 
     &:after {
