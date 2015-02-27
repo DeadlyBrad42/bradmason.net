@@ -23,7 +23,15 @@
 		});
 
 		var loadContent = function(source, $destination) {
-			$destination.html($(source).html());
+			var speed = 200,
+				animateOptions = { height: 'toggle', opacity: 'toggle' },
+				animateEasing = 'swing';
+
+			$destination.animate(animateOptions, speed, animateEasing, function(){
+				$destination.html($(source).html());
+				$destination.animate(animateOptions, speed, animateEasing);
+			});
+
 		}
 	});
 
