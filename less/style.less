@@ -57,7 +57,11 @@ h1 /*, h2, h3, h4, h5, h6*/ {
   font-size: 1.75em;
   line-height: 100%;
 
-  a { .ignore-default-link-style; }
+  a {
+    .ignore-default-link-style;
+    border: none !important;
+    &:hover { border: none !important };
+  }
 }
 h2 {
   margin-bottom: 1.25em;
@@ -387,10 +391,10 @@ ul#social li {
 
 .ignore-default-link-style {
   // Used to override the default linking style
-  border: none !important;
+  border: initial;
   .transition (all 0 ease 0);
 
-  &:hover { border: none !important; }
+  &:hover { border: initial; }
   &:after { display: none; }
 }
 
