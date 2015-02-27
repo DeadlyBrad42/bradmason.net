@@ -247,7 +247,7 @@ header .pic-circle {
 
     & > img {
       padding-top: (@avatar_diameter_hover - @avatar_height) / 2;
-      transition: padding-top 1s;
+      .transition (~"padding-top 1s");
       .animation (~"animatedPictureFloat 1s linear infinite");
       .animation-delay (1s);
     }
@@ -416,17 +416,17 @@ ul#social li {
 }
 
 @keyframes animatedPictureFloat {
-    0% { padding-top: (@avatar_diameter_hover - @avatar_height) / 2; }
+    0% { padding-top: ((@avatar_diameter_hover - @avatar_height) / 2); }
    25% { padding-top: ((@avatar_diameter_hover - @avatar_height) / 2) + (@avatar_height / 16); }
-   50% { padding-top: (@avatar_diameter_hover - @avatar_height) / 2; }
+   50% { padding-top: ((@avatar_diameter_hover - @avatar_height) / 2); }
    75% { padding-top: ((@avatar_diameter_hover - @avatar_height) / 2) - (@avatar_height / 16); }
-  100% { padding-top: (@avatar_diameter_hover - @avatar_height) / 2; }
+  100% { padding-top: ((@avatar_diameter_hover - @avatar_height) / 2); }
 }
 
 @-webkit-keyframes animatedPictureFloat {
-    0% { padding-top: (@avatar_diameter_hover - @avatar_height) / 2; }
+    0% { padding-top: ((@avatar_diameter_hover - @avatar_height) / 2); }
    25% { padding-top: ((@avatar_diameter_hover - @avatar_height) / 2) + (@avatar_height / 16); }
-   50% { padding-top: (@avatar_diameter_hover - @avatar_height) / 2; }
+   50% { padding-top: ((@avatar_diameter_hover - @avatar_height) / 2); }
    75% { padding-top: ((@avatar_diameter_hover - @avatar_height) / 2) - (@avatar_height / 16); }
-  100% { padding-top: (@avatar_diameter_hover - @avatar_height) / 2; }
+  100% { padding-top: ((@avatar_diameter_hover - @avatar_height) / 2); }
 }
