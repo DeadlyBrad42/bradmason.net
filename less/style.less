@@ -301,8 +301,6 @@ ul.btn-group {
 
   li {
     display: inline;
-
-    &:first-child a { margin-left: 0; }
   }
 
   .btn {
@@ -310,11 +308,12 @@ ul.btn-group {
 
     color: @right_textColor;
     padding: 6px;
-    margin: 6px;
+    margin: 6px 0;
+    margin-right: 6px;
     border: 2px solid @right_textColor;
     overflow: hidden;
     -webkit-transform: translateZ(0); // "Hack" to force a new animation rendering layer because Chrome
-    .border-radius(8px);
+    .border-radius (8px);
     .transition (~"color 0.25s");
     .transition-delay (~"0.125s");
 
