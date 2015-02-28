@@ -313,12 +313,12 @@ ul.btn-group {
     margin: 6px;
     border: 2px solid @right_textColor;
     overflow: hidden;
+    -webkit-transform: translateZ(0); // "Hack" to force a new animation rendering layer because Chrome
     .border-radius(8px);
     .transition (~"color 0.25s");
     .transition-delay (~"0.125s");
 
     &:after {
-      color: #FFFFFF;
       display: block;
       content: "";
       background-color: @right_textColor;
@@ -333,8 +333,8 @@ ul.btn-group {
       .transition (~"top 0.5s");
     }
     &:hover {
-      color: #FFFFFF;
-      
+      color: #FFFFFF !important; // FF ignores this color rule after the transition is complete, unless it's marked as !important (I really dont' know why)
+
       &:after {
         top: -10px;
       }
