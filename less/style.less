@@ -246,7 +246,7 @@ header .pic-circle {
     .animation-play-state (running);
 
     & > img {
-      padding-top: (@avatar_diameter_hover - @avatar_height) / 2;
+      padding-top: ((@avatar_diameter_hover - @avatar_height) / 2);
       .transition (~"padding-top 1s");
       .animation (~"animatedPictureFloat 1s linear infinite");
       .animation-delay (1s);
@@ -312,7 +312,33 @@ ul.btn-group {
     padding: 6px;
     margin: 6px;
     border: 2px solid @right_textColor;
+    overflow: hidden;
     .border-radius(8px);
+    .transition (~"color 0.25s");
+    .transition-delay (~"0.125s");
+
+    &:after {
+      color: #FFFFFF;
+      display: block;
+      content: "";
+      background-color: @right_textColor;
+      z-index: -1;
+      position: absolute;
+      margin: 0;
+      width: 100%;
+      height: 150%;
+      top: 100%;
+      left: 0;
+      right: 0;
+      .transition (~"top 0.5s");
+    }
+    &:hover {
+      color: #FFFFFF;
+      
+      &:after {
+        top: -10px;
+      }
+    }
 
     &:hover { border: 2px solid @right_textColor !important; }
     &:visited { color: @right_textColor; }
