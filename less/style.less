@@ -28,8 +28,6 @@
 @social_bgcolor_git:            #FF2464;
 @social_bgcolor_blog:           #FF8E00;
 
-@leftNav_mediaBreakpoint:       1050px;
-
 /****** Standard element styles ***********************************************/
 
 /* Quick-n-dirty reset */
@@ -192,15 +190,11 @@ aside#meta {
     border-bottom-color: @left_textColor;
     &:after { background-color: @right_imgBorderColor; }
   }
-
-  @media (min-width: @leftNav_mediaBreakpoint) {
-    
-  }
 }
 
 section#content {
-  margin: 2.5em auto 0 auto;
-  padding: 1.0em 2.0em;
+  margin: 0 auto;
+  padding: 2.0em;
   max-width: @right_colMaxWidth;
 
   & > div {
