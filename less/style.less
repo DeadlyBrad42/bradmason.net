@@ -53,9 +53,10 @@ body {
   height: 100%;
 }
 
-h1 /*, h2, h3, h4, h5, h6*/ {
+h1 {
   font-size: 1.75em;
   line-height: 100%;
+  margin-bottom: 50px;
 
   a {
     .ignore-default-link-style;
@@ -219,10 +220,10 @@ section#content {
 /****** Components ************************************************************/
 
 header .avatar-wrapper {
-  width: @avatar_diameter_hover + 25;
-  height: @avatar_diameter_hover + 25;
+  width: 100%;
+  height: @avatar_diameter_hover;
   margin: 0 auto;
-  padding-top: 50px;
+  padding-top: 1px;
 
   .avatar-circle {
     width: @avatar_diameter_normal;
