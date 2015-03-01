@@ -135,7 +135,9 @@ aside#meta {
     margin: @left_verticalMargin auto;
 
     li {
-      display: inline;
+      display: inline-block;
+      height: @social_size_hover;
+      width: @social_size_hover;
 
       a {
         .ignore-default-link-style;
@@ -148,12 +150,12 @@ aside#meta {
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         display: inline-block;
-        width: @social_size;
-        height: @social_size;
-        line-height: @social_size;
+        width: @social_size_hover;
+        height: @social_size_hover;
+        line-height: @social_size_hover;
+        transform: scale(0.75);
         font-size: 0;                     // Hide the list's actual text
-        margin: (@social_size_hover - @social_size) / 2;
-        .transition (~"width 0.5s ease, height 0.5s ease, line-height 0.5s ease, margin 0.5s ease");
+        .transition (~"transform 0.5s ease");
         .border-radius (50%);
 
         &:before {
@@ -162,12 +164,7 @@ aside#meta {
           speak: none;
         }
 
-        &:hover {
-          width: @social_size_hover;
-          height: @social_size_hover;
-          line-height: @social_size_hover;
-          margin: 0px;
-        }
+        &:hover { transform: scale(1.0); }
       }
 
       &.twitter a {
