@@ -257,8 +257,9 @@ header .pic-circle {
 ul.showcase-list {
   list-style: none;
 
-  li {
+  & > li {
     margin: 1em 0 1.25em;
+    .clearfix;
 
     .proj-img {
       width: 250px;
@@ -428,6 +429,18 @@ ul#social li {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+      clear: both;
+  }
 }
 
 @keyframes animatedCircleBackground {
