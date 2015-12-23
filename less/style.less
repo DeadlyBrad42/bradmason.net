@@ -19,6 +19,7 @@
 @avatar_width:                  84px;
 @avatar_height:                 108px;
 @avatar_margin_topbottom:       50px;
+@avatar_background_size:        90px;
 
 @left_verticalMargin:           50px;
 @social_size:                   50px;
@@ -228,9 +229,9 @@ header .avatar-wrapper {
     background-image: url('../img/bg.png');
     background-repeat: repeat;
     background-position: center center;
-    background-attachment: fixed;
+    // background-attachment: fixed;
     .transition (~"width 1s, height 1s, margin 1s");
-    .animation (~"animatedCircleBackground 15s linear infinite");
+    .animation (~"animatedCircleBackground 1.5s linear infinite");
     .animation-play-state (paused);
 
     & > img {
@@ -316,6 +317,7 @@ ul.btn-group {
     border: 2px solid @right_textColor;
     overflow: hidden;
     -webkit-transform: translateZ(0); // "Hack" to force a new animation rendering layer because Chrome
+    transform: translateZ(0);
     .border-radius (8px);
     .transition (~"color 0.25s");
     .transition-delay (~"0.125s");
@@ -447,12 +449,12 @@ ul#social li {
 
 @keyframes animatedCircleBackground {
     0% { background-position: 0 0; }
-  100% { background-position: 100% 100%; }
+  100% { background-position: (@avatar_background_size - 1px) (@avatar_background_size - 1px); }
 }
 
 @-webkit-keyframes animatedCircleBackground {
     0% { background-position: 0 0; }
-  100% { background-position: 100% 100%; }
+  100% { background-position: (@avatar_background_size - 1px) (@avatar_background_size - 1px); }
 }
 
 @keyframes animatedPictureFloat {
