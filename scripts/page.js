@@ -32,7 +32,7 @@
 				$destination.animate(animateOptions, speed, animateEasing);
 			});
 
-		}
+		};
 	});
 
 	$(function(){
