@@ -1,0 +1,506 @@
+// out: ../styles/portfolio.css, compress: true
+
+/****** Variables *************************************************************/
+
+@left_colWidth:                 350px;
+@right_colMaxWidth:             1050px;
+
+@left_textColor:                #DEDEDE;
+@left_backgroundColor:          #252525;
+@right_textColor:               #343434;
+@right_backgroundColor:         #EEEEEE;
+@right_imgBorderColor:          #FFFFFF;
+
+@avatar_diameter_normal:        150px;
+@avatar_diameter_hover:         @avatar_diameter_normal + 25;
+@avatar_width:                  84px;
+@avatar_height:                 108px;
+@avatar_margin_topbottom:       50px;
+@avatar_background_size:        90px;
+
+@left_verticalMargin:           50px;
+@social_size:                   50px;
+@social_size_hover:             @social_size + 10px;
+@social_color:                  #FFFFFF;
+@social_bgcolor_twitter:        #00AAFF;
+@social_bgcolor_git:            #FF2464;
+@social_bgcolor_blog:           #FF8E00;
+
+/****** Standard element styles ***********************************************/
+
+/* Quick-n-dirty reset */
+* {
+    margin: 0px;
+    padding: 0px;
+    ul { list-style-position: inside; }
+}
+
+html {
+    font-family: "Open Sans", Helvetica, Arial, Verdana, sans-serif;
+    font-size: 1.35em;
+    line-height: 1.65em;
+    height: 100%;
+}
+
+body {
+    color: @right_textColor;
+    // background-color: @right_backgroundColor;  // Set to @left_backgroundColor because Firefox doesn't render .avatar-wrapper correctly
+    background-color: @left_backgroundColor;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.15);
+    height: 100%;
+}
+
+h1 {
+    font-size: 1.75em;
+    line-height: 100%;
+    margin-bottom: 50px;
+
+    a {
+        .ignore-default-link-style;
+        border: none !important;
+        &:hover { border: none !important };
+    }
+}
+h2 {
+margin  -bottom: 1.25em;
+}
+
+p {}
+
+a {
+    text-decoration: none;
+    color: @right_textColor;
+    border-bottom: 1px dotted @right_textColor;
+    position: relative;
+    display: inline-block;
+    .transition(border 0.5s);
+
+    &:after {
+        content: "";
+        width: 0%;
+        height: 2px;
+        display: inline-block;
+        position: absolute;
+        bottom: -1.5px;
+        left: 0;
+        background-color: @right_textColor;
+        margin-left: 50%;
+        margin-top: 1px;
+        .transition (~"width 0.5s, margin-left 0.5s");
+    }
+
+    &:hover {
+        border-bottom: 1px dotted transparent !important;
+
+        &:after {
+            width: 100%;
+            margin-left: 0%;
+        }
+    }
+}
+
+section {
+    min-height: 100vh;
+    background-color: @right_backgroundColor;
+}
+
+
+/****** Layout ****************************************************************/
+
+div#wrapper {
+    padding-left: @left_colWidth;
+}
+
+aside#meta {
+    color: @left_textColor;
+    background-color: @left_backgroundColor;
+    width: @left_colWidth;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 2.0em 2.0em;
+    .box-sizing(border-box);
+
+    ul#nav-list {
+        border-bottom: 1px dotted @right_textColor;
+        border-top: 1px dotted @right_textColor;
+        list-style: none outside none;
+        margin: @left_verticalMargin auto;
+
+        li {
+            display: inline-block;
+            margin: 10px 5px;
+        }
+    }
+
+  ul#social {
+    list-style: none outside none;
+    margin: @left_verticalMargin auto;
+
+    li {
+        display: inline-block;
+        height: @social_size_hover;
+        width: @social_size_hover;
+
+        a {
+            .ignore-default-link-style;
+
+            display: inline-block;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            display: inline-block;
+            width: @social_size_hover;
+            height: @social_size_hover;
+            line-height: @social_size_hover;
+            transform: scale(0.75);
+            font-size: 0;                     // Hide the list's actual text
+            .transition (~"transform 0.5s ease");
+            .border-radius (50%);
+
+            &:before {
+                color: @social_color;
+                font-size: (@social_size - 20px);
+                speak: none;
+            }
+
+            &:hover { transform: scale(1.0); }
+        }
+
+        &.twitter a {
+            background-color: @social_bgcolor_twitter;
+            &:before { content: "\e600"; }
+        }
+        &.github a {
+            background-color: @social_bgcolor_git;
+            &:before { content: "\e601"; }
+        }
+        &.tumblr a {
+            background-color: @social_bgcolor_blog;
+            &:before { content: "\e602"; }
+        }
+    }
+  }
+
+    a {
+        color: @left_textColor;
+        border-bottom-color: @left_textColor;
+        &:after { background-color: @right_imgBorderColor; }
+    }
+}
+
+section#content {
+    background-color: @right_backgroundColor;
+    margin: 0 auto;
+    padding: 2.0em;
+    max-width: @right_colMaxWidth;
+
+    & > div {
+        margin-bottom: 7.0em;
+    }
+
+    &:after {
+        content: "";
+        width: 75%;
+        display: block;
+        margin: 0 auto;
+        border-bottom: 1px solid @right_textColor;
+    }
+}
+
+
+/****** Components ************************************************************/
+
+.avatar-wrapper {
+    height: @avatar_diameter_normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    figure {
+        width: @avatar_diameter_normal;
+        height: @avatar_diameter_normal;
+        background-color: #02B1F1;
+        background-image: url('../assets/img/bg.png');
+        background-repeat: repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        border: 0.2em solid @right_imgBorderColor;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .transition(~"width 1s, height 1s");
+        .animation (~"animatedCircleBackground 1.5s linear infinite");
+        .animation-play-state (~"paused");
+
+        figcaption {
+            display: flex;
+            align-items: center;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        &:hover {
+            width: @avatar_diameter_hover;
+            height: @avatar_diameter_hover;
+            .animation-play-state (~"running");
+
+            figcaption {
+                .animation(~"animatedPictureFloat 1.5s linear infinite");
+            }
+        }
+    }
+}
+
+ul.showcase-list {
+    list-style: none;
+
+    & > li {
+        margin: 1em 0 1.25em;
+        .clearfix;
+
+        .proj-img {
+            width: 250px;
+            height: 250px;
+            border: 1px solid @right_textColor;
+            float: left;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                transform: scale(1.0, 1.0) rotate(.00001deg); // rotation transform fixes issues with Firefox's terrible image resizing
+                .transition (~"transform 1s");
+            }
+        }
+
+        h3, time, div, ul {
+            margin-left: (250px + 2px + 12px);
+        }
+
+        time {
+            font-style: italic;
+            display: block;
+            margin-bottom: 0.75em;
+        }
+
+        * {
+            margin-bottom: 0.25em;
+        }
+
+        &:hover span.proj-img img {
+            transform: scale(1.5, 1.5) rotate(.00001deg); // rotation transform fixes issues with Firefox's terrible image resizing
+        }
+    }
+}
+
+ul.btn-group {
+    list-style: none;
+    margin-bottom: 1.25em;
+
+    li {
+        display: inline;
+    }
+
+    .btn {
+        .ignore-default-link-style;
+
+        color: @right_textColor;
+        padding: 6px;
+        margin: 6px 0;
+        margin-right: 6px;
+        border: 2px solid @right_textColor;
+        overflow: hidden;
+        -webkit-transform: translateZ(0); // "Hack" to force a new animation rendering layer because Chrome
+        transform: translateZ(0);
+        .border-radius (8px);
+        .transition (~"color 0.25s");
+        .transition-delay (~"0.125s");
+
+        &:after {
+            display: block;
+            content: "";
+            background-color: @right_textColor;
+            z-index: -1;
+            position: absolute;
+            margin: 0;
+            width: 100%;
+            height: 150%;
+            top: 100%;
+            left: 0;
+            right: 0;
+            .transition (~"top 0.5s");
+        }
+
+        &:hover {
+            color: #FFFFFF !important; // FF ignores this color rule after the transition is complete, unless it's marked as !important (I really dont' know why)
+
+            &:after {
+                top: -10px;
+            }
+        }
+
+        &:hover { border: 2px solid @right_textColor !important; }
+        &:visited { color: @right_textColor; }
+    }
+}
+
+
+/****** Fonts & Icons *********************************************************/
+
+@font-face {
+    font-family: 'glyphs';
+    src: url('fonts/glyphs.eot');
+    src: url('fonts/glyphs.eot?#iefix') format('embedded-opentype'),
+        url('fonts/glyphs.woff') format('woff'),
+        url('fonts/glyphs.ttf') format('truetype'),
+        url('fonts/glyphs.svg#glyphs') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+ul#social li {
+    font-family: 'glyphs';
+}
+
+
+/****** Mixins and Animations *************************************************/
+
+.animation (@value) {
+    -webkit-animation: @value;
+    -moz-animation: @value;
+    -o-animation: @value;
+    animation: @value;
+}
+
+.animation-delay (@value) {
+    -webkit-animation-delay: @value;
+    -moz-animation-delay: @value;
+    -o-animation-delay: @value;
+    animation-delay: @value;
+}
+
+.animation-play-state (@value) {
+    -webkit-animation-play-state: @value;
+    -moz-animation-play-state: @value;
+    -o-animation-play-state: @value;
+    animation-play-state: @value;
+}
+
+.transition (@value) {
+    -webkit-transition: @value;
+    -moz-transition: @value;
+    -o-transition: @value;
+    transition: @value;
+}
+
+.transition-delay (@value) {
+    -webkit-transition-delay: @value;
+    -moz-transition-delay: @value;
+    -o-transition-delay: @value;
+    transition-delay: @value;
+}
+
+.border-radius (@value) {
+    -webkit-border-radius: @value;
+    -moz-border-radius: @value;
+    -o-border-radius: @value;
+    border-radius: @value;
+}
+
+.box-sizing (@value) {
+    -webkit-box-sizing: @value;
+    -moz-box-sizing: @value;
+    -o-box-sizing: @value;
+    box-sizing: @value;
+}
+
+.ignore-default-link-style {
+    // Used to override the default linking style
+    border: initial;
+    .transition (all 0 ease 0);
+
+    &:hover { border: initial; }
+    &:after { display: none; }
+}
+
+.disable-user-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.clearfix {
+    *zoom: 1;
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@keyframes animatedCircleBackground {
+      0% { background-position: 0 0; }
+    100% { background-position: (@avatar_background_size - 1px) (@avatar_background_size - 1px); }
+}
+
+@-webkit-keyframes animatedCircleBackground {
+      0% { background-position: 0 0; }
+    100% { background-position: (@avatar_background_size - 1px) (@avatar_background_size - 1px); }
+}
+
+@keyframes animatedPictureFloat {
+    0% {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    25% {
+       margin-top: 0;
+       margin-bottom: 10px;
+    }
+    50% {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    75% {
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+    100% {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+@-webkit-keyframes animatedPictureFloat {
+    0% {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    25% {
+       margin-top: 0;
+       margin-bottom: 10px;
+    }
+    50% {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    75% {
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+    100% {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
