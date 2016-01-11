@@ -102,11 +102,6 @@ a {
     }
 }
 
-section {
-    min-height: 100vh;
-    background-color: @right_backgroundColor;
-}
-
 
 /****** Layout ****************************************************************/
 
@@ -125,6 +120,7 @@ aside#meta {
     left: 0;
     padding: 2.0em 2.0em;
     .box-sizing(border-box);
+    box-shadow: 3px 0px 10px 1px rgba(0,0,0,0.15);
 
     ul#nav-list {
         border-bottom: 1px dotted @right_textColor;
@@ -198,10 +194,12 @@ aside#meta {
 }
 
 section#content {
+    min-height: 100vh;
+    max-width: @right_colMaxWidth;
     background-color: @right_backgroundColor;
     margin: 0 auto;
     padding: 2.0em;
-    max-width: @right_colMaxWidth;
+    .box-sizing(border-box);
 
     & > article {
         margin-bottom: 7.0em;
