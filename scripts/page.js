@@ -1,6 +1,6 @@
 (function($, sammy, analytics){
 	// initialize the application
-	var app = $.sammy('#content', function() {
+	var app = $.sammy('#content > div', function() {
 
 		this.get('/', function() {
 			loadContent('#about', this.$element());

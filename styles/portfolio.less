@@ -44,7 +44,8 @@ html {
 
 body {
   color: @right_textColor;
-  background-color: @right_backgroundColor;
+  // background-color: @right_backgroundColor;  // Set to @left_backgroundColor because Firefox doesn't render .avatar-wrapper correctly
+  background-color: @left_backgroundColor;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.15);
   height: 100%;
 }
@@ -72,7 +73,7 @@ a {
   border-bottom: 1px dotted @right_textColor;
   position: relative;
   display: inline-block;
-  .transition (border 0.5s);
+  .transition(border 0.5s);
 
   &:after {
     content: "";
@@ -95,6 +96,11 @@ a {
       margin-left: 0%;
     }
   }
+}
+
+section {
+    min-height: 100vh;
+    background-color: @right_backgroundColor;
 }
 
 
@@ -188,6 +194,7 @@ aside#meta {
 }
 
 section#content {
+    background-color: @right_backgroundColor;
   margin: 0 auto;
   padding: 2.0em;
   max-width: @right_colMaxWidth;
@@ -208,50 +215,46 @@ section#content {
 
 /****** Components ************************************************************/
 
-header .avatar-wrapper {
-  width: 100%;
-  height: @avatar_diameter_hover;
-  margin: 0 auto;
-  padding-top: 1px;
-
-  .avatar-circle {
-    width: @avatar_diameter_normal;
+.avatar-wrapper {
     height: @avatar_diameter_normal;
-    .border-radius (50%);
-    margin: 12.5px auto 0;
-    border: 0.2em solid @right_imgBorderColor;
-    position: relative;
-    overflow: hidden;
-    background-color: #02B1F1;
-    background-image: url('../assets/img/bg.png');
-    background-repeat: repeat;
-    background-position: center center;
-    // background-attachment: fixed;
-    .transition (~"width 1s, height 1s, margin 1s");
-    .animation (~"animatedCircleBackground 1.5s linear infinite");
-    .animation-play-state (paused);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    & > img {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin-top: -(@avatar_height / 2);
-      margin-left: -(@avatar_width / 2);
-      .transition (~"top 1s");
+    figure {
+        width: @avatar_diameter_normal;
+        height: @avatar_diameter_normal;
+        background-color: #02B1F1;
+        background-image: url('../assets/img/bg.png');
+        background-repeat: repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        border: 0.2em solid @right_imgBorderColor;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .transition(~"width 1s, height 1s");
+        .animation (~"animatedCircleBackground 1.5s linear infinite");
+        .animation-play-state (~"paused");
+
+        figcaption {
+            display: flex;
+            align-items: center;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        &:hover {
+            width: @avatar_diameter_hover;
+            height: @avatar_diameter_hover;
+            .animation-play-state (~"running");
+
+            figcaption {
+                .animation(~"animatedPictureFloat 1.5s linear infinite");
+            }
+        }
     }
-
-    &:hover {
-      width: @avatar_diameter_hover;
-      height: @avatar_diameter_hover;
-      margin-top: 0;
-      .animation-play-state (running);
-
-      & > img {
-        .animation (~"animatedPictureFloat 1s linear infinite");
-        .animation-delay (1s);
-      }
-    }
-  }
 }
 
 ul.showcase-list {
@@ -455,17 +458,47 @@ ul#social li {
 }
 
 @keyframes animatedPictureFloat {
-    0% { top: 50%; }
-   25% { top: 55%; }
-   50% { top: 50%; }
-   75% { top: 45%; }
-  100% { top: 50%; }
+    0% {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    25% {
+       margin-top: 0;
+       margin-bottom: 10px;
+    }
+    50% {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    75% {
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+    100% {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 }
 
 @-webkit-keyframes animatedPictureFloat {
-    0% { top: 50%; }
-   25% { top: 55%; }
-   50% { top: 50%; }
-   75% { top: 45%; }
-  100% { top: 50%; }
+    0% {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    25% {
+       margin-top: 0;
+       margin-bottom: 10px;
+    }
+    50% {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    75% {
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+    100% {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 }
