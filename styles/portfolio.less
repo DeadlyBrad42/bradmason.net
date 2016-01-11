@@ -26,6 +26,9 @@
 @social_bgcolor_git:            #FF2464;
 @social_bgcolor_blog:           #FF8E00;
 
+@card_border:                   #DDDDDD;
+@card_background:               #FFFFFF;
+
 /****** Standard element styles ***********************************************/
 
 /* Quick-n-dirty reset */
@@ -200,7 +203,7 @@ section#content {
     padding: 2.0em;
     max-width: @right_colMaxWidth;
 
-    & > div {
+    & > article {
         margin-bottom: 7.0em;
     }
 
@@ -209,7 +212,7 @@ section#content {
         width: 75%;
         display: block;
         margin: 0 auto;
-        border-bottom: 1px solid @right_textColor;
+        border-bottom: 1px solid @card_border;
     }
 }
 
@@ -258,6 +261,13 @@ section#content {
     }
 }
 
+article {   // Used as a "card"
+    background-color: @card_background;
+    padding: 1em;
+    border: 1px solid @card_border;
+    box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.15);
+}
+
 ul.showcase-list {
     list-style: none;
 
@@ -275,7 +285,7 @@ ul.showcase-list {
             img {
                 width: 100%;
                 height: 100%;
-                transform: scale(1.0, 1.0) rotate(.00001deg); // rotation transform fixes issues with Firefox's terrible image resizing
+                transform: scale(0.8, 0.8) rotate(.00001deg); // rotation transform fixes issues with Firefox's terrible image resizing
                 .transition (~"transform 1s");
             }
         }
@@ -295,7 +305,7 @@ ul.showcase-list {
         }
 
         &:hover span.proj-img img {
-            transform: scale(1.5, 1.5) rotate(.00001deg); // rotation transform fixes issues with Firefox's terrible image resizing
+            transform: scale(1.0, 1.0) rotate(.00001deg); // rotation transform fixes issues with Firefox's terrible image resizing
         }
     }
 }
