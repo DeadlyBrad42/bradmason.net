@@ -1,11 +1,11 @@
-(function (exports, appData, cardVm, descriptionComponent) {
+(function (exports, appData, cardComponent) {
     'use strict';
 
     exports.vueEngine = {
         el: '#content',
         data: function () {
             return {
-                'currentView': 'description'
+                'currentView': 'card'
             };
         },
         ready: function () {
@@ -13,12 +13,12 @@
         },
         methods: {
             setData: function (newData) {
-
+                // ?
             }
         },
         components: {
-            'description': window.descriptionComponent
+            'card': cardComponent
         }
     };
 
-})(window, window.appData, window.cardVm, window.descriptionComponent);
+})(window, window.appData, window.cardComponent);

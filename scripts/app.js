@@ -45,10 +45,10 @@
     // router.init();
 
     // Intialize Vue components
-    Vue.component('card', cardComponent);
     Vue.component('description', descriptionComponent);
-    Vue.component('project', projectComponent);
     Vue.component('linkList', linkListComponent);
+    Vue.component('project', projectComponent);
+    Vue.component('card', cardComponent);
 
     // Start Vue
     Vue.config.debug = true;

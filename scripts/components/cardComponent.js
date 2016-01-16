@@ -2,7 +2,7 @@
     'use strict';
 
     exports.cardComponent = {
-        template: '#cardView',
+        template: '#card',
         data: function () {
             return {
                 title: 'title here!',
