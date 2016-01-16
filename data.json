@@ -1,0 +1,123 @@
+{
+    "cards": {
+    	"about": {
+    		"title": "About",
+    		"text": [
+    			"I'm Brad Mason, a software developer located in <a href=\"http://maps.google.com/maps?q=pittsburgh,+pa&amp;z=12\">Pittsburgh</a>. I work at <a href=\"http://www.acatar.com/\">Acatar</a>, a small company that believes it can change online education in a big way.",
+    			"I spend a lot of my spare time <a href=\"/#games\">making games</a> and <a href=\"/#projects\">building other projects</a>, both because I enjoy expanding my technical knowledge and because I enjoy the act of creating to add something new and interesting to the world."
+    		],
+            "links": [
+                {
+                    "text": "Email",
+                    "url": "mailto:BradTMason@gmail.com",
+                    "type": "email"
+                },
+                {
+                    "text": "R&eacute;sum&eacute;",
+                    "url": "/assets/bin/resume.pdf",
+                    "type": "pdf"
+                }
+            ]
+    	},
+    	"games": {
+    		"title": "Games",
+    		"showcase": [
+    			{
+    				"title": "Prison Break",
+    				"dates": "December 2012",
+    				"tagline": "A game made in a single weekend!",
+                    "imageUrl": "assets/img/projects/prison_break/prison_break.png",
+    				"text": [
+    					"A game built in a single weekend for the <a href=\"http://www.ludumdare.com/compo/about-ludum-dare/\">Ludum Dare</a> competion. I learned a lot (mostly about scope creep!) and still managed to have a game at the end of it all."
+    				],
+    				"links": [
+    					{
+    						"text": "View LD Entry",
+    						"url": "http://www.ludumdare.com/compo/ludum-dare-25/?action=preview&uid=7004",
+    						"type": "link"
+    					},
+    					{
+    						"text": "View Blog Post",
+    						"url": "http://codemoosey.com/post/38209960309/finished-my-entry-for-ludum-dare-the-game-is",
+    						"type": "blogpost"
+    					}
+    				]
+    			}
+    		]
+    	},
+    	"projects": {
+    		"title": "Projects",
+    		"showcase": [
+                {
+                    "title": "SpriteStitcher",
+                    "dates": "September 2014",
+                    "tagline": "A game-dev tool that builds a spritesheet out of single-frame images",
+                    "imageUrl": "assets/img/projects/spritestitcher/spritestitcher.png",
+                    "text": [
+                        "A quickly-made gamedev tool for stitching together individual animation frames into a spritesheet."
+                    ],
+                    "links": [
+                        {
+                            "text": "More Info &amp; Source",
+                            "url": "https://github.com/DeadlyBrad42/SpriteStitcher",
+                            "type": "source"
+                        }
+                    ]
+                },
+                {
+                    "title": "CopyPad",
+                    "dates": "September 2012",
+                    "tagline": "Quickly copy and paste emoticons from your system tray!",
+                    "imageUrl": "assets/img/projects/copypad/copypad.png",
+                    "text": [
+                        "CopyPad allows the user to select pre-defined emoticons to add to their clipboard, allowing them to quickly paste the emoticon into any appliation."
+                    ],
+                    "links": [
+                        {
+                            "text": "View Source",
+                            "url": "https://github.com/DeadlyBrad42/CopyPad-Windows",
+                            "type": "source"
+                        },
+                        {
+                            "text": "View Blog Post",
+                            "url": "http://codemoosey.com/post/24733225040/ever-wish-you-could-easily-copy-and-paste",
+                            "type": "blogpost"
+                        }
+                    ]
+                },
+                {
+                    "title": "Student's Friend",
+                    "dates": "April 2012",
+                    "tagline": "A course management system for instructors and students",
+                    "imageUrl": "assets/img/projects/students_friend/students_friend.png",
+                    "text": [
+                        "My PSU Senior Project, Student's Friend was all-inclusive project that took me and my teammates through designing a system, implementing it, and documenting all of its features. The system ran on a <acronym title=\"Linux, Apache, MySQL, and PHP\">LAMP</acronym> stack, and used JavaScript/jQuery for AJAX and stylized effects."
+                    ],
+                    "links": [
+                        {
+                            "text": "More Info &amp; Source",
+                            "url": "https://github.com/DeadlyBrad42/Student-s-Friend",
+                            "type": "source"
+                        }
+                    ]
+                },
+                {
+                    "title": "Pixel Pipeline",
+                    "dates": "~2007",
+                    "tagline": "A prototype raytracing program written in C++",
+                    "imageUrl": "assets/img/projects/pixel_pipeline/pixel_pipeline.png",
+                    "text": [
+                        "Pixel Pipeline is a simple 3D raytracer capable of rendering scenes made of cubes represented by a three dimensional array. I never quite got the rendering code perfect, but making bitmap images in code always felt pretty cool!"
+                    ],
+                    "links": [
+                        {
+                            "text": "More Info &amp; Source",
+                            "url": "https://github.com/DeadlyBrad42/Pixel-Pipeline",
+                            "type": "source"
+                        }
+                    ]
+                }
+            ]
+    	}
+    }
+}
