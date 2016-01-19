@@ -14,7 +14,7 @@
 * **Views and view components (viewmodels)** are written in [Vue](http://http://vuejs.org). Mainly because I wanted to try a new MVVM framework that was small, fast, and easy to use. I also was itching to tread away from the libraries that I already knew.
 * **Styles** are written in LESS for organization, modularity, and maintainability. I'm using [Atom](https://atom.io/) and the [less-autocompile library](https://atom.io/packages/less-autocompile) to compile to CSS on-the-fly, but you could also use the vanilla LESS compiler.
 * All **animation** is done through CSS (well, technically LESS). I chose this method primarily because I believe in separating presentation code from utility code.
-* The page was **tested** in every browser I could get my hands on, including Chrome/Firefox/Safari/Internet Explorer on OS X/Windows/Android/iOS.
+* The page was **tested** in every browser I could get my hands on, which includes *Chrome*, *Firefox*, *Safari*, and *Internet Explorer* on *OS X*, *Windows*, *Android*, and *iOS*.
 * There is a small easter egg inspired by the [world's most famous cheat code](https://en.wikipedia.org/wiki/Konami_Code).
 
 ## Get In Touch
