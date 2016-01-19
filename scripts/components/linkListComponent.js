@@ -2,8 +2,8 @@
     'use strict';
 
     exports.linkListComponent = {
-        template: '#link-list',
-        props: ['links'],
+        template: '#link',
+        props: ['link'],
         computed: {
             badges: function () {
                 console.log("calculate badges here!");

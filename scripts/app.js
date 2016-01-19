@@ -1,7 +1,7 @@
 (function (exports, console, Vue, Router, vueEngine, descriptionComponent, linkListComponent, projectListComponent, cardComponent) {
     'use strict';
 
-    // Blatant advertising and shameless self-promotion 
+    // Blatant advertising and shameless self-promotion
     console.log('This page\'s source code is available over at https://github.com/DeadlyBrad42/bradmason.net for your viewing pleasure.');
 
     // Load data from data.json
@@ -49,8 +49,8 @@
 
     // Intialize Vue components
     Vue.component('vue-description', descriptionComponent);
-    Vue.component('vue-linklist', linkListComponent);
-    Vue.component('vue-projectlist', projectListComponent);
+    Vue.component('vue-link', linkListComponent);
+    Vue.component('vue-project', projectListComponent);
     Vue.component('vue-card', cardComponent);
 
     // Start Vue

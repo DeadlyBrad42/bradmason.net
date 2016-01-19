@@ -2,8 +2,8 @@
     'use strict';
 
     exports.projectListComponent = {
-        template: '#project-list',
-        props: ['projects'],
+        template: '#project',
+        props: ['project'],
         computed: {
             badges: function () {
                 console.log("calculate badges here!");

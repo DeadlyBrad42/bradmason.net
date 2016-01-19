@@ -92,8 +92,16 @@ This page's source is available at https://github.com/DeadlyBrad42/bradmason.net
     <article>
         <h2>{{title}}</h2>
         <vue-description :text="text"></vue-description>
-        <vue-projectlist v-if="projects" :projects="projects"></vue-projectlist>
-        <vue-linklist v-if="links" :links="links"></vue-linklist>
+        <ul v-if="projects" class="project-list">
+            <li v-for="project in projects">
+                <vue-project :project="project"></vue-project>
+            </li>
+        </ul>
+        <ul v-if="links" class="link-list">
+            <li v-for="link in links">
+                <vue-link :link="link"></vue-link>
+            </li>
+        </ul>
     </article>
 </script>
 
@@ -103,25 +111,21 @@ This page's source is available at https://github.com/DeadlyBrad42/bradmason.net
     </div>
 </script>
 
-<script id="project-list" type="x-template">
-    <ul class="project-list">
-        <li v-for="project in projects" id="{{project.projectSlug}}">
-            <span class="proj-img"><img v-bind:src="project.imageUrl" /></span>
-            <h3>{{project.title}}</h3>
-            <time datetime="{{project.datetime}}">{{project.dateTitle}}</time>
-            <div class="tagline">{{project.tagline}}</div>
-            <vue-description :text="project.description"></vue-description>
-            <vue-linklist v-if="project.links" :links="project.links"></vue-linklist>
+<script id="project" type="x-template">
+    <span class="proj-img"><img v-bind:src="project.imageUrl" /></span>
+    <h3>{{project.title}}</h3>
+    <time datetime="{{project.datetime}}">{{project.dateTitle}}</time>
+    <div class="tagline">{{project.tagline}}</div>
+    <vue-description :text="project.description"></vue-description>
+    <ul v-if="project.links" class="link-list">
+        <li v-for="link in project.links">
+            <vue-link :link="link"></vue-link>
         </li>
     </ul>
 </script>
 
-<script id="link-list" type="x-template">
-    <ul class="link-list">
-        <li v-for="link in links">
-            <a v-bind:href="link.url" class="btn btn-site">{{link.text}}</a>
-        </li>
-    </ul>
+<script id="link" type="x-template">
+    <a v-bind:href="link.url" class="btn btn-site">{{link.text}}</a>
 </script>
 
 
