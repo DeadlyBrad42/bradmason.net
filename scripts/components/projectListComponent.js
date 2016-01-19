@@ -1,9 +1,9 @@
-(function (exports) {
+(function (exports, projectLinksVm) {
     'use strict';
 
-    exports.linkListComponent = {
-        template: '#link-list',
-        props: ['links'],
+    exports.projectListComponent = {
+        template: '#project-list',
+        props: ['projects'],
         computed: {
             badges: function () {
                 console.log("calculate badges here!");
@@ -11,8 +11,8 @@
             }
         },
         ready: function () {
-            console.log('linkListComponent ready!');
+            console.log('projectListComponent ready!');
         }
     };
 
-})(window);
+})(window, window.projectLinksVm);

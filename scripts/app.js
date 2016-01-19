@@ -1,4 +1,4 @@
-(function (exports, Vue, Router, vueEngine, descriptionComponent, linkListComponent, projectComponent, cardComponent) {
+(function (exports, Vue, Router, vueEngine, descriptionComponent, linkListComponent, projectListComponent, cardComponent) {
     'use strict';
 
     // Load data from data.json
@@ -45,13 +45,13 @@
     // router.init();
 
     // Intialize Vue components
-    Vue.component('description', descriptionComponent);
-    Vue.component('linkList', linkListComponent);
-    Vue.component('project', projectComponent);
-    Vue.component('card', cardComponent);
+    Vue.component('vue-description', descriptionComponent);
+    Vue.component('vue-linklist', linkListComponent);
+    Vue.component('vue-projectlist', projectListComponent);
+    Vue.component('vue-card', cardComponent);
 
     // Start Vue
     Vue.config.debug = true;
     exports.app = new Vue(vueEngine);
 
-})(window, Vue, VueRouter, window.vueEngine, window.descriptionComponent, window.linkListComponent, window.projectComponent, window.cardComponent);
+})(window, Vue, VueRouter, window.vueEngine, window.descriptionComponent, window.linkListComponent, window.projectListComponent, window.cardComponent);
