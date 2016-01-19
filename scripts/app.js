@@ -1,4 +1,4 @@
-(function (exports, Vue, Router, dataStore, vueEngine, descriptionComponent, linkListComponent, projectListComponent, cardComponent) {
+(function (exports, Vue, router, dataStore, vueEngine, descriptionComponent, linkListComponent, projectListComponent, cardComponent) {
     'use strict';
 
     var app;
@@ -20,33 +20,32 @@
 
 
     // Register routes
-    // var router = new Router({
-    //     '/': function() {
-    //         app.currentData = appData;
-    //         analytics('/');
-    //     },
-    //     '/about': function() {
-    //         app.currentData = appData;
-    //         analytics('/about');
-    //     },
-    //     '/projects': function() {
-    //         app.currentData = appData;
-    //         analytics('/projects');
-    //     },
-    //     '/games': function() {
-    //         app.currentData = appData;
-    //         analytics('/games');
-    //     },
-    // });
-    // router.init();
+    router.registerRoute('', function () {
+        app.setView('about');
+        // analytics('/');
+    });
+    router.registerRoute('about', function () {
+        app.setView('about');
+        // analytics('/about');
+    });
+    router.registerRoute('projects', function () {
+        app.setView('projects');
+        // analytics('/about');
+    });
+    router.registerRoute('games', function () {
+        app.setView('games');
+        // analytics('/games');
+    });
 
     // Get the initial app data
     dataStore.getData(function (initialData) {
         app.setAppData(initialData);
-        app.setView('about');
+
+        // initialize the routing engine
+        router.init();
     });
 
     // Export the app
     exports.app = app;
 
-})(window, Vue, VueRouter, window.dataStore, window.vueEngine, window.descriptionComponent, window.linkListComponent, window.projectListComponent, window.cardComponent);
+})(window, Vue, window.router, window.dataStore, window.vueEngine, window.descriptionComponent, window.linkListComponent, window.projectListComponent, window.cardComponent);
