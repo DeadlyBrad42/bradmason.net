@@ -4,14 +4,18 @@
     exports.vueEngine = {
         el: '#content',
         data: {
-            'currentData': {}
+            'currentData': {},
+            'appData': {}
         },
         ready: function () {
             // console.log('vueEngine ready!');
         },
         methods: {
-            setData: function (newData) {
-                this.currentData = newData;
+            setView: function (view) {
+                this.currentData = this.appData.views[view];
+            },
+            setAppData: function (appData) {
+                this.appData = appData;
             }
         },
         computed: {
