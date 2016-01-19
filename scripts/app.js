@@ -1,5 +1,8 @@
-(function (exports, Vue, Router, vueEngine, descriptionComponent, linkListComponent, projectListComponent, cardComponent) {
+(function (exports, console, Vue, Router, vueEngine, descriptionComponent, linkListComponent, projectListComponent, cardComponent) {
     'use strict';
+
+    // Blatant advertising and shameless self-promotion 
+    console.log('This page\'s source code is available over at https://github.com/DeadlyBrad42/bradmason.net for your viewing pleasure.');
 
     // Load data from data.json
     //TODO: Remove this test data
@@ -54,4 +57,4 @@
     Vue.config.debug = true;
     exports.app = new Vue(vueEngine);
 
-})(window, Vue, VueRouter, window.vueEngine, window.descriptionComponent, window.linkListComponent, window.projectListComponent, window.cardComponent);
+})(window, console, Vue, VueRouter, window.vueEngine, window.descriptionComponent, window.linkListComponent, window.projectListComponent, window.cardComponent);
