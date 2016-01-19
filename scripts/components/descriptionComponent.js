@@ -5,7 +5,7 @@
         template: '#description',
         props: ['text'],
         ready: function () {
-            console.log('descriptionComponent ready!');
+            // console.log('descriptionComponent ready!');
         }
     };
 

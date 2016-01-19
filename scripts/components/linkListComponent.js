@@ -11,7 +11,7 @@
             }
         },
         ready: function () {
-            console.log('linkListComponent ready!');
+            // console.log('linkListComponent ready!');
         }
     };
 

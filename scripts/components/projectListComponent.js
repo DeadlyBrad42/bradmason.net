@@ -11,7 +11,7 @@
             }
         },
         ready: function () {
-            console.log('projectListComponent ready!');
+            // console.log('projectListComponent ready!');
         }
     };
 

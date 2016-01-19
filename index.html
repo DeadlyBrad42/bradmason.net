@@ -83,22 +83,23 @@ This page's source is available at https://github.com/DeadlyBrad42/bradmason.net
     </aside>
 
     <section id="content">
-        <vue-card :is="currentView"></vue-card>
+        <vue-card :data="currentData"></vue-card>
     </section>
 
 </div>
 
 <script id="card" type="x-template">
+{{ $data.currentData | json }}
     <article>
-        <h2>{{title}}</h2>
-        <vue-description :text="text"></vue-description>
-        <ul v-if="projects" class="project-list">
-            <li v-for="project in projects">
+        <h2>{{data.title}}</h2>
+        <vue-description :text="data.text"></vue-description>
+        <ul v-if="data.projects" class="project-list">
+            <li v-for="project in data.projects">
                 <vue-project :project="project"></vue-project>
             </li>
         </ul>
-        <ul v-if="links" class="link-list">
-            <li v-for="link in links">
+        <ul v-if="data.links" class="link-list">
+            <li v-for="link in data.links">
                 <vue-link :link="link"></vue-link>
             </li>
         </ul>

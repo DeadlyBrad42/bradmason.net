@@ -3,17 +3,20 @@
 
     exports.vueEngine = {
         el: '#content',
-        data: function () {
-            return {
-                'currentView': 'card'
-            };
+        data: {
+            'currentData': {}
         },
         ready: function () {
-            console.log('vueEngine ready!');
+            // console.log('vueEngine ready!');
         },
         methods: {
             setData: function (newData) {
-                // ?
+                this.currentData = newData;
+            }
+        },
+        computed: {
+            getData: function () {
+                return this.currentData;
             }
         },
         components: {
