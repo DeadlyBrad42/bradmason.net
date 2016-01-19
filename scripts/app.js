@@ -50,6 +50,18 @@
         ]
     };
 
+    // Intialize Vue components
+    Vue.component('vue-description', descriptionComponent);
+    Vue.component('vue-link', linkListComponent);
+    Vue.component('vue-project', projectListComponent);
+    Vue.component('vue-card', cardComponent);
+
+    // Start Vue
+    Vue.config.debug = true;
+    exports.app = new Vue(vueEngine);
+
+
+
     // Register routes
     // var router = new Router({
     //     '/': function() {
@@ -70,17 +82,6 @@
     //     },
     // });
     // router.init();
-
-    // Intialize Vue components
-    Vue.component('vue-description', descriptionComponent);
-    Vue.component('vue-link', linkListComponent);
-    Vue.component('vue-project', projectListComponent);
-    Vue.component('vue-card', cardComponent);
-
-    // Start Vue
-    Vue.config.debug = true;
-    exports.app = new Vue(vueEngine);
-
     exports.app.setData(appData);
 
 })(window, console, Vue, VueRouter, window.vueEngine, window.descriptionComponent, window.linkListComponent, window.projectListComponent, window.cardComponent);
