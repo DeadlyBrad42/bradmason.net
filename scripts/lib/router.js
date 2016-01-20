@@ -22,6 +22,8 @@
 
             if (typeof routeToExecute !== 'undefined' && typeof routeToExecute === 'function') {
                 routeToExecute();
+            } else {
+                console.error('Route handler not found!');
             }
         },
         init: function () {
@@ -31,12 +33,12 @@
 
             // Figure out where we're supposed to be and execute that route
             router.setCurrentRoute(currentRoute);
-        }
-    };
 
-    // Register the onhashchange handler to execute the new routes
-    window.onhashchange = function (event) {
-        router.setCurrentRoute(event.newURL.split('#')[1]);
+            // Register the onhashchange handler to execute the new routes
+            exports.onhashchange = function (event) {
+                router.setCurrentRoute(event.newURL.split('#')[1]);
+            };
+        }
     };
 
 })(window, window.location);

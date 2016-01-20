@@ -1,12 +1,10 @@
 (function (exports) {
     'use strict';
 
-    var xhr;
-
     exports.dataStore = {
         getData: function (callback) {
             // Initiate AJAX request
-            xhr = new XMLHttpRequest();
+            var xhr = new XMLHttpRequest();
             xhr.open('GET', '/data.json', true);
             xhr.send(null);
 
