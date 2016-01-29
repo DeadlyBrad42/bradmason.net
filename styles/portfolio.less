@@ -195,14 +195,14 @@ aside#meta {
 
 section#content {
     min-height: 100vh;
-    max-width: @right_colMaxWidth;
     background-color: @right_backgroundColor;
     margin: 0 auto;
     padding: 2.0em;
     .box-sizing(border-box);
 
     & > article {
-        margin-bottom: 7.0em;
+        max-width: @right_colMaxWidth;
+        margin: 0 auto 7.0em;
     }
 
     &:after {
