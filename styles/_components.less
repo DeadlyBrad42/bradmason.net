@@ -1,6 +1,36 @@
 // main: portfolio.less
 /****** Components ************************************************************/
 
+// Konami Code
+.avatar-wrapper figure {
+    overflow: hidden;
+    figcaption {
+        position: relative;
+
+        .specs {
+            position: absolute;
+            top: -100px;
+            left: (-@avatar_konami_spec_width * (1/2)) + (@avatar_width * (1/2));
+            .transition (~"top 0.5s ease-in-out");
+        }
+        .dwi {
+            position: absolute;
+            top: 150px;
+            left: (-@avatar_konami_dwi_width * (1/2)) + (@avatar_width * (1/2));
+            .transition (~"top 0.5s ease-in-out");
+        }
+
+        body.konami & {
+            .specs {
+                top: 49px;
+            }
+            .dwi {
+                top: 10px;
+            }
+        }
+    }
+}
+
 .avatar-wrapper {
     height: @avatar_diameter_normal;
     display: flex;
