@@ -158,30 +158,21 @@ aside#meta {
             height: @social_size_hover;
             line-height: @social_size_hover;
             transform: scale(0.75);
-            font-size: 0;                     // Hide the list's actual text
+            font-size: 1.5rem;
             .transition (~"transform 0.5s ease");
             .border-radius (50%);
-
-            &:before {
-                color: @social_color;
-                font-size: (@social_size - 20px);
-                speak: none;
-            }
 
             &:hover { transform: scale(1.0); }
         }
 
         &.twitter a {
             background-color: @social_bgcolor_twitter;
-            &:before { content: "\e600"; }
         }
         &.github a {
             background-color: @social_bgcolor_git;
-            &:before { content: "\e601"; }
         }
         &.tumblr a {
             background-color: @social_bgcolor_blog;
-            &:before { content: "\e602"; }
         }
     }
   }
@@ -195,14 +186,14 @@ aside#meta {
 
 section#content {
     min-height: 100vh;
-    max-width: @right_colMaxWidth;
     background-color: @right_backgroundColor;
     margin: 0 auto;
     padding: 2.0em;
     .box-sizing(border-box);
 
     & > article {
-        margin-bottom: 7.0em;
+        max-width: @right_colMaxWidth;
+        margin: 0 auto 7.0em;
     }
 
     &:after {
@@ -359,6 +350,14 @@ ul.link-list {
     }
 }
 
+.sr-only {
+    clip: rect(0, 0, 0, 0);
+    position: absolute !important;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+}
+
 
 /****** Fonts & Icons *********************************************************/
 
@@ -371,10 +370,6 @@ ul.link-list {
         url('fonts/glyphs.svg#glyphs') format('svg');
     font-weight: normal;
     font-style: normal;
-}
-
-ul#social li {
-    font-family: 'glyphs';
 }
 
 
