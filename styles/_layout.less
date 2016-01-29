@@ -1,0 +1,102 @@
+// main: portfolio.less
+/****** Layout ****************************************************************/
+
+div#wrapper {
+    padding-left: @left_colWidth;
+}
+
+aside#meta {
+    color: @left_textColor;
+    background-color: @left_backgroundColor;
+    width: @left_colWidth;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 2.0em 2.0em;
+    .box-sizing(border-box);
+    box-shadow: 3px 0px 10px 1px rgba(0,0,0,0.15);
+
+    ul#nav-list {
+        border-bottom: 1px dotted @right_textColor;
+        border-top: 1px dotted @right_textColor;
+        list-style: none outside none;
+        margin: @left_verticalMargin auto;
+
+        li {
+            display: inline-block;
+            margin: 10px 5px;
+        }
+    }
+
+  ul#social {
+    list-style: none outside none;
+    margin: @left_verticalMargin auto;
+
+    li {
+        display: inline-block;
+        height: @social_size_hover;
+        width: @social_size_hover;
+
+        a {
+            .ignore-default-link-style;
+
+            display: inline-block;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            display: inline-block;
+            width: @social_size_hover;
+            height: @social_size_hover;
+            line-height: @social_size_hover;
+            transform: scale(0.75);
+            font-size: 1.5rem;
+            .transition (~"transform 0.5s ease");
+            .border-radius (50%);
+
+            &:hover { transform: scale(1.0); }
+        }
+
+        &.twitter a {
+            background-color: @social_bgcolor_twitter;
+        }
+        &.github a {
+            background-color: @social_bgcolor_git;
+        }
+        &.tumblr a {
+            background-color: @social_bgcolor_blog;
+        }
+    }
+  }
+
+    a {
+        color: @left_textColor;
+        border-bottom-color: @left_textColor;
+        &:after { background-color: @right_imgBorderColor; }
+    }
+}
+
+section#content {
+    min-height: 100vh;
+    background-color: @right_backgroundColor;
+    margin: 0 auto;
+    padding: 2.0em;
+    .box-sizing(border-box);
+
+    & > article {
+        max-width: @right_colMaxWidth;
+        margin: 0 auto 7.0em;
+    }
+
+    &:after {
+        content: "";
+        width: 75%;
+        display: block;
+        margin: 0 auto;
+        border-bottom: 1px solid @card_border;
+    }
+}

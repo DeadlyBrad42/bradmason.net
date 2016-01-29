@@ -1,0 +1,79 @@
+// main: portfolio.less
+/****** Mixins ****************************************************************/
+
+.animation (@value) {
+    -webkit-animation: @value;
+    -moz-animation: @value;
+    -o-animation: @value;
+    animation: @value;
+}
+
+.animation-delay (@value) {
+    -webkit-animation-delay: @value;
+    -moz-animation-delay: @value;
+    -o-animation-delay: @value;
+    animation-delay: @value;
+}
+
+.animation-play-state (@value) {
+    -webkit-animation-play-state: @value;
+    -moz-animation-play-state: @value;
+    -o-animation-play-state: @value;
+    animation-play-state: @value;
+}
+
+.transition (@value) {
+    -webkit-transition: @value;
+    -moz-transition: @value;
+    -o-transition: @value;
+    transition: @value;
+}
+
+.transition-delay (@value) {
+    -webkit-transition-delay: @value;
+    -moz-transition-delay: @value;
+    -o-transition-delay: @value;
+    transition-delay: @value;
+}
+
+.border-radius (@value) {
+    -webkit-border-radius: @value;
+    -moz-border-radius: @value;
+    -o-border-radius: @value;
+    border-radius: @value;
+}
+
+.box-sizing (@value) {
+    -webkit-box-sizing: @value;
+    -moz-box-sizing: @value;
+    -o-box-sizing: @value;
+    box-sizing: @value;
+}
+
+.ignore-default-link-style {
+    // Used to override the default linking style
+    border: initial;
+    .transition (all 0 ease 0);
+
+    &:hover { border: initial; }
+    &:after { display: none; }
+}
+
+.disable-user-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.clearfix {
+    *zoom: 1;
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}

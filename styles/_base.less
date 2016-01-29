@@ -1,0 +1,73 @@
+// main: portfolio.less
+/****** Standard element styles ***********************************************/
+
+/* Quick-n-dirty reset */
+* {
+    margin: 0px;
+    padding: 0px;
+    ul { list-style-position: inside; }
+}
+
+html {
+    font-family: "Open Sans", Helvetica, Arial, Verdana, sans-serif;
+    font-size: 1.35em;
+    line-height: 1.65em;
+    height: 100%;
+}
+
+body {
+    color: @right_textColor;
+    // background-color: @right_backgroundColor;  // Set to @left_backgroundColor because Firefox doesn't render .avatar-wrapper correctly
+    background-color: @left_backgroundColor;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.15);
+    height: 100%;
+}
+
+h1 {
+    font-size: 1.75em;
+    line-height: 100%;
+    margin-bottom: 50px;
+
+    a {
+        .ignore-default-link-style;
+        border: none !important;
+        &:hover { border: none !important };
+    }
+}
+h2 {
+margin  -bottom: 1.25em;
+}
+
+p {}
+
+a {
+    text-decoration: none;
+    color: @right_textColor;
+    border-bottom: 1px dotted @right_textColor;
+    position: relative;
+    display: inline-block;
+    .transition(border 0.5s);
+
+    &:after {
+        content: "";
+        width: 0%;
+        height: 2px;
+        display: inline-block;
+        position: absolute;
+        bottom: -1.5px;
+        left: 0;
+        background-color: @right_textColor;
+        margin-left: 50%;
+        margin-top: 1px;
+        .transition (~"width 0.5s, margin-left 0.5s");
+    }
+
+    &:hover {
+        border-bottom: 1px dotted transparent !important;
+
+        &:after {
+            width: 100%;
+            margin-left: 0%;
+        }
+    }
+}
