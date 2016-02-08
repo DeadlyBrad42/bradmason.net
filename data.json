@@ -1,11 +1,11 @@
 {
     "views": {
-    	"about": {
-    		"title": "About",
-    		"text": [
-    			"I'm Brad Mason, a software developer located in <a href=\"http://maps.google.com/maps?q=pittsburgh,+pa&amp;z=12\">Pittsburgh</a>. I work at <a href=\"http://www.acatar.com/\">Acatar</a>, a small company that believes it can change online education in a big way.",
-    			"I spend a lot of my spare time <a href=\"/#games\">making games</a> and <a href=\"/#projects\">building other projects</a>, both because I enjoy expanding my technical knowledge and because I enjoy the act of creating to add something new and interesting to the world."
-    		],
+        "about": {
+            "title": "About",
+            "text": [
+                "I'm Brad Mason, a software developer located in <a href=\"http://maps.google.com/maps?q=pittsburgh,+pa&amp;z=12\">Pittsburgh</a>. I work at <a href=\"http://www.acatar.com/\">Acatar</a>, a small company that believes it can change online education in a big way.",
+                "I spend a lot of my spare time <a href=\"/#games\">making games</a> and <a href=\"/#projects\">building other projects</a>, both because I enjoy expanding my technical knowledge and because I enjoy the act of creating to add something new and interesting to the world."
+            ],
             "links": [
                 {
                     "text": "Email",
@@ -18,37 +18,37 @@
                     "type": "pdf"
                 }
             ]
-    	},
-    	"games": {
-    		"title": "Games",
-    		"projects": [
-    			{
-    				"title": "Prison Break",
-    				"datetitle": "December 2012",
+        },
+        "games": {
+            "title": "Games",
+            "projects": [
+                {
+                    "title": "Prison Break",
+                    "datetitle": "December 2012",
                     "datetime": "2012-12",
-    				"tagline": "A game made in a single weekend!",
+                    "tagline": "A game made in a single weekend!",
                     "imageUrl": "assets/img/projects/prison_break/prison_break.png",
-    				"text": [
-    					"A game built in a single weekend for the <a href=\"http://www.ludumdare.com/compo/about-ludum-dare/\">Ludum Dare</a> competion. I learned a lot (mostly about scope creep!) and still managed to have a game at the end of it all."
-    				],
-    				"links": [
-    					{
-    						"text": "View LD Entry",
-    						"url": "http://www.ludumdare.com/compo/ludum-dare-25/?action=preview&uid=7004",
-    						"type": "link"
-    					},
-    					{
-    						"text": "View Blog Post",
-    						"url": "http://codemoosey.com/post/38209960309/finished-my-entry-for-ludum-dare-the-game-is",
-    						"type": "blogpost"
-    					}
-    				]
-    			}
-    		]
-    	},
-    	"projects": {
-    		"title": "Projects",
-    		"projects": [
+                    "text": [
+                        "A game built in a single weekend for the <a href=\"http://www.ludumdare.com/compo/about-ludum-dare/\">Ludum Dare</a> competion. I learned a lot (mostly about scope creep!) and still managed to have a game at the end of it all."
+                    ],
+                    "links": [
+                        {
+                            "text": "View LD Entry",
+                            "url": "http://www.ludumdare.com/compo/ludum-dare-25/?action=preview&uid=7004",
+                            "type": "link"
+                        },
+                        {
+                            "text": "View Blog Post",
+                            "url": "http://codemoosey.com/post/38209960309/finished-my-entry-for-ludum-dare-the-game-is",
+                            "type": "blogpost"
+                        }
+                    ]
+                }
+            ]
+        },
+        "projects": {
+            "title": "Projects",
+            "projects": [
                 {
                     "title": "SpriteStitcher",
                     "datetitle": "September 2014",
@@ -123,6 +123,6 @@
                     ]
                 }
             ]
-    	}
+        }
     }
 }
