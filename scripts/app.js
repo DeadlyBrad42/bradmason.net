@@ -4,7 +4,7 @@
     var app;
 
     // Blatant advertising and shameless self-promotion
-    console.log('This page\'s source code is available over at https://github.com/DeadlyBrad42/bradmason.net for your viewing pleasure.');
+    console.log('This page\'s source code is available over at https://github.com/DeadlyBrad42/bradmason.net :)');
 
 
     // Intialize Vue components
