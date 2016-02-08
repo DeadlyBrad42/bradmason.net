@@ -1,15 +1,9 @@
 # Ignore compiled CSS
 styles/portfolio.css
 
-# Ignore the Archive of Ancient Versions
-@old/*
-
 # Ignore things that aren't ready yet
 *.wip.*
 
 # Actual temp files
 *.tmp
 *.temp
-
-# That thing where MS Office leaves weird temp files all over the place
-~*.doc
