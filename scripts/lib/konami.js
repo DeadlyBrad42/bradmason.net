@@ -9,7 +9,7 @@
         isKonamiMode = false;
 
     exports.onkeyup = function(event){
-        if (event.keyCode == theCode[correctCharsEntered]) {
+        if (event.keyCode === theCode[correctCharsEntered]) {
             correctCharsEntered++;
 
             if (correctCharsEntered === theCode.length) {
