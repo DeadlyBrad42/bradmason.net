@@ -1,6 +1,7 @@
 // main: portfolio.less
 /****** Mixins ****************************************************************/
 
+// Animations & Transistions
 .animation (@value) {
     -webkit-animation: @value;
     -moz-animation: @value;
@@ -36,6 +37,7 @@
     transition-delay: @value;
 }
 
+// Borders & Box Model
 .border-radius (@value) {
     -webkit-border-radius: @value;
     -moz-border-radius: @value;
@@ -50,6 +52,50 @@
     box-sizing: @value;
 }
 
+// Flexbox
+.display-flex() {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.flex-justify-content(@value) {
+    -ms-justify-content: @value;
+    -webkit-justify-content: @value;
+    justify-content: @value;
+}
+
+.flex-direction(@value) {
+    -webkit-flex-direction: @value;
+    -ms-flex-align: @value;
+    flex-direction: @value;
+}
+
+.flex-align-items(@value) {
+    -webkit-flex-align: @value;
+    -ms-flex-align: @value;
+    -webkit-align-items: @value;
+    align-items: @value;
+}
+
+.flexbox-align-self(@value) {
+    -webkit-align-self: @value;
+    align-self: @value;
+}
+
+.flexbox-justify-content(@value) {
+    -webkit-justify-content: @value;
+    justify-content: @value;
+}
+
+.flexbox-wrap(@value) {
+    -webkit-flex-wrap: @value;
+    flex-wrap: @value;
+}
+
+// Misc. & Utility
 .ignore-default-link-style {
     // Used to override the default linking style
     border: initial;

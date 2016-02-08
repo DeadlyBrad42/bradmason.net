@@ -24,7 +24,7 @@
             "projects": [
                 {
                     "title": "Prison Break",
-                    "datetitle": "December 2012",
+                    "dateTitle": "December 2012",
                     "datetime": "2012-12",
                     "tagline": "A game made in a single weekend!",
                     "imageUrl": "assets/img/projects/prison_break/prison_break.png",
@@ -51,7 +51,7 @@
             "projects": [
                 {
                     "title": "SpriteStitcher",
-                    "datetitle": "September 2014",
+                    "dateTitle": "September 2014",
                     "datetime": "09-2014",
                     "tagline": "A game-dev tool that builds a spritesheet out of single-frame images",
                     "imageUrl": "assets/img/projects/spritestitcher/spritestitcher.png",
@@ -68,7 +68,7 @@
                 },
                 {
                     "title": "CopyPad",
-                    "datetitle": "September 2012",
+                    "dateTitle": "September 2012",
                     "datetime": "09-2012",
                     "tagline": "Quickly copy and paste emoticons from your system tray!",
                     "imageUrl": "assets/img/projects/copypad/copypad.png",
@@ -90,7 +90,7 @@
                 },
                 {
                     "title": "Student's Friend",
-                    "datetitle": "April 2012",
+                    "dateTitle": "April 2012",
                     "datetime": "04-2012",
                     "tagline": "A course management system for instructors and students",
                     "imageUrl": "assets/img/projects/students_friend/students_friend.png",
@@ -107,7 +107,7 @@
                 },
                 {
                     "title": "Pixel Pipeline",
-                    "datetitle": "~2007",
+                    "dateTitle": "~2007",
                     "datetime": "2007",
                     "tagline": "A prototype raytracing program written in C++",
                     "imageUrl": "assets/img/projects/pixel_pipeline/pixel_pipeline.png",
