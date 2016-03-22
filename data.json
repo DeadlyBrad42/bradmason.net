@@ -77,14 +77,14 @@
                     ],
                     "links": [
                         {
-                            "text": "View Source",
-                            "url": "https://github.com/DeadlyBrad42/CopyPad-Windows",
-                            "type": "source"
-                        },
-                        {
                             "text": "View Blog Post",
                             "url": "http://codemoosey.com/post/24733225040/ever-wish-you-could-easily-copy-and-paste",
                             "type": "blogpost"
+                        },
+                        {
+                            "text": "View Source",
+                            "url": "https://github.com/DeadlyBrad42/CopyPad-Windows",
+                            "type": "source"
                         }
                     ]
                 },
