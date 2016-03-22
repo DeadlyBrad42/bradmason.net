@@ -16,9 +16,9 @@ html {
 }
 
 body {
-    color: @right_textColor;
-    // background-color: @right_backgroundColor;  // Set to @left_backgroundColor because Firefox doesn't render .avatar-wrapper correctly
-    background-color: @left_backgroundColor;
+    color: @content_textColor;
+    // background-color: @content_backgroundColor;  // Set to @meta_backgroundColor because Firefox doesn't render .avatar-wrapper correctly
+    background-color: @meta_backgroundColor;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.15);
     height: 100%;
 }
@@ -42,8 +42,8 @@ p {}
 
 a {
     text-decoration: none;
-    color: @right_textColor;
-    border-bottom: 1px dotted @right_textColor;
+    color: @content_textColor;
+    border-bottom: 1px dotted @content_textColor;
     position: relative;
     display: inline-block;
     .transition(border 0.5s);
@@ -56,7 +56,7 @@ a {
         position: absolute;
         bottom: -1.5px;
         left: 0;
-        background-color: @right_textColor;
+        background-color: @content_textColor;
         margin-left: 50%;
         margin-top: 1px;
         .transition (~"width 0.5s, margin-left 0.5s");

@@ -1,14 +1,14 @@
 // main: portfolio.less
 /****** Variables *************************************************************/
+// Layout
+@meta_colWidth:                 350px;
+@content_colMaxWidth:           1050px;
 
-@left_colWidth:                 350px;
-@right_colMaxWidth:             1050px;
-
-@left_textColor:                #DEDEDE;
-@left_backgroundColor:          #252525;
-@right_textColor:               #343434;
-@right_backgroundColor:         #EEEEEE;
-@right_imgBorderColor:          #FFFFFF;
+@meta_textColor:                #DEDEDE;
+@meta_backgroundColor:          #252525;
+@content_textColor:             #343434;
+@content_backgroundColor:       #EEEEEE;
+@content_imgBorderColor:        #FFFFFF;
 
 @avatar_diameter_normal:        150px;
 @avatar_diameter_hover:         @avatar_diameter_normal + 25;
@@ -21,7 +21,7 @@
 @avatar_konami_dwi_width:       143px;
 @avatar_konami_dwi_height:      29px;
 
-@left_verticalMargin:           50px;
+@meta_verticalMargin:           50px;
 @social_size:                   50px;
 @social_size_hover:             @social_size + 10px;
 @social_color:                  #FFFFFF;
@@ -31,3 +31,7 @@
 
 @card_border:                   #DDDDDD;
 @card_background:               #FFFFFF;
+
+// Breakpoints
+@break-nav: ~"screen and (max-width: 960px)";
+@break-min-nav: ~"screen and (max-width: 625px)";
