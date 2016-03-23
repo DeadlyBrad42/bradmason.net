@@ -4,7 +4,7 @@
 div#wrapper {
     padding-left: @meta_colWidth;
 
-    @media @break-nav {
+    @media @phone-or-smaller {
         padding-left: 0;
     }
 }
@@ -83,7 +83,7 @@ aside#meta {
         &:after { background-color: @content_imgBorderColor; }
     }
 
-    @media @break-nav {
+    @media @phone-or-smaller {
         position: initial;
         width: 100%;
         padding: 0.5rem;
@@ -121,7 +121,7 @@ aside#meta {
         }
     }
 
-    @media @break-min-nav {
+    @media @tiny-screen-or-smaller {
         ul#nav-list li { margin: 0; }
 
         ul#social li {
@@ -158,7 +158,7 @@ section#content {
         border-bottom: 1px solid @card_border;
     }
 
-    @media @break-nav {
+    @media @phone-or-smaller {
         padding: 1rem 0.5rem;
     }
 }
