@@ -72,7 +72,7 @@
         }
     }
 
-    @media @break-nav {
+    @media @phone-or-smaller {
         height: inherit;
         padding: 0.5rem;
 
@@ -125,56 +125,69 @@ ul.project-list {
         }
 
         .proj-tile {
-            display: block;
-            position: relative;
-            width: 450px;
-            height: 300px;
-            border: 1px solid @content_textColor;
-            overflow: hidden;
+            width: initial;
+            height: initial;
+            border: none;
 
             img {
                 width: 100%;
-                height: 100%;
-            }
-
-            ul.link-list { margin: 0; }
-        }
-
-        .shade {
-            color: white;
-            text-align: center;
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background-color: fade(@meta_backgroundColor, 75%);
-            opacity: 0.0;
-            transform: scale(1.5, 1.5);
-            .transition(~"transform 0.25s ease-in-out, opacity 0.25s ease-in-out");
-            .display-flex();
-            .flex-direction(column);
-            .flex-justify-content(space-around);
-
-            // Invert button colors in here
-            ul.link-list .btn {
-                color: white;
-                border-color: white;
-                &:hover { color: @content_textColor !important; }
-                &:hover { border: 2px solid white !important; }
-                &:visited { color: white; }
-                &:after { border-color: white; background-color: white; }
-            }
-
-            .tagline {
-                padding: 0.5rem;
+                border: 1px solid @content_textColor;
             }
         }
 
-        &:hover {
+        @media @desktop-or-larger {
+            .proj-tile {
+                display: block;
+                position: relative;
+                width: 450px;
+                height: 300px;
+                border: 1px solid @content_textColor;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                ul.link-list { margin: 0; }
+            }
+
             .shade {
-                opacity: 1.0;
-                transform: scale(1.0, 1.0);
+                color: white;
+                text-align: center;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: fade(@meta_backgroundColor, 75%);
+                opacity: 0.0;
+                transform: scale(1.5, 1.5);
+                .transition(~"transform 0.25s ease-in-out, opacity 0.25s ease-in-out");
+                .display-flex();
+                .flex-direction(column);
+                .flex-justify-content(space-around);
+
+                // Invert button colors in here
+                ul.link-list .btn {
+                    color: white;
+                    border-color: white;
+                    &:hover { color: @content_textColor !important; }
+                    &:hover { border: 2px solid white !important; }
+                    &:visited { color: white; }
+                    &:after { border-color: white; background-color: white; }
+                }
+
+                .tagline {
+                    padding: 0.5rem;
+                }
+            }
+
+            &:hover {
+                .shade {
+                    opacity: 1.0;
+                    transform: scale(1.0, 1.0);
+                }
             }
         }
     }
@@ -192,9 +205,8 @@ ul.link-list {
         .ignore-default-link-style;
 
         color: @content_textColor;
-        padding: 6px;
-        margin: 6px 0;
-        margin-right: 6px;
+        padding: 0.25rem;
+        margin: 0.25rem 0;
         border: 2px solid @content_textColor;
         overflow: hidden;
         -webkit-transform: translateZ(0); // "Hack" to force a new animation rendering layer because Chrome
