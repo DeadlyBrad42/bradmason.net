@@ -4,7 +4,7 @@
     exports.vueEngine = {
         el: '#content',
         data: {
-            'currentData': {},
+            'currentView': {},
             'appData': {}
         },
         ready: function () {
@@ -12,7 +12,7 @@
         },
         methods: {
             setView: function (view) {
-                this.currentData = this.appData.views[view];
+                this.currentView = this.appData.views[view];
             },
             setAppData: function (appData) {
                 this.appData = appData;
@@ -20,7 +20,7 @@
         },
         computed: {
             getData: function () {
-                return this.currentData;
+                return this.currentView;
             }
         },
         components: {

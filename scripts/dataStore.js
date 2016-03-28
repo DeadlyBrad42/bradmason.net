@@ -8,7 +8,7 @@
             xhr.open('GET', '/data.json', true);
             xhr.send(null);
 
-            xhr.addEventListener("load", function (something, something1, something2) {
+            xhr.addEventListener("load", function () {
                 callback(JSON.parse(this.responseText));
             });
         }
