@@ -11,13 +11,13 @@
             position: absolute;
             top: -100px;
             left: (-@avatar_konami_spec_width * (1/2)) + (@avatar_width * (1/2));
-            .transition (~"top 0.5s ease-in-out");
+            #mixins > .transition (~"top 0.5s ease-in-out");
         }
         .dwi {
             position: absolute;
             top: 150px;
             left: (-@avatar_konami_dwi_width * (1/2)) + (@avatar_width * (1/2));
-            .transition (~"top 0.5s ease-in-out");
+            #mixins > .transition (~"top 0.5s ease-in-out");
         }
 
         body.konami & {
@@ -50,9 +50,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        .transition(~"width 1s, height 1s");
-        .animation (~"animatedCircleBackground 1.5s linear infinite");
-        .animation-play-state (~"paused");
+        #mixins > .transition(~"width 1s, height 1s");
+        #mixins > .animation (~"animatedCircleBackground 1.5s linear infinite");
+        #mixins > .animation-play-state (~"paused");
 
         figcaption {
             display: flex;
@@ -64,10 +64,10 @@
         &:hover {
             width: @avatar_diameter_hover;
             height: @avatar_diameter_hover;
-            .animation-play-state (~"running");
+            #mixins > .animation-play-state (~"running");
 
             figcaption {
-                .animation(~"animatedPictureFloat 1.5s linear infinite");
+                #mixins > .animation(~"animatedPictureFloat 1.5s linear infinite");
             }
         }
     }
@@ -106,17 +106,17 @@ article {   // Used as a "card"
 
 ul.project-list {
     list-style: none;
-    .display-flex();
-    .flex-justify-content(space-around);
-    .flex-align-items(center);
-    .flexbox-wrap(wrap);
+    #mixins > .display-flex();
+    #mixins > .flex-justify-content(space-around);
+    #mixins > .flex-align-items(center);
+    #mixins > .flexbox-wrap(wrap);
 
     li {
         margin: 0.5rem 0.5rem 1.0rem;
 
         .proj-title {
-            .display-flex();
-            .flex-justify-content(space-between);
+            #mixins > .display-flex();
+            #mixins > .flex-justify-content(space-between);
 
             time {
                 font-style: italic;
@@ -163,19 +163,14 @@ ul.project-list {
                 background-color: fade(@meta_backgroundColor, 75%);
                 opacity: 0.0;
                 transform: scale(1.5, 1.5);
-                .transition(~"transform 0.25s ease-in-out, opacity 0.25s ease-in-out");
-                .display-flex();
-                .flex-direction(column);
-                .flex-justify-content(space-around);
+                #mixins > .transition(~"transform 0.25s ease-in-out, opacity 0.25s ease-in-out");
+                #mixins > .display-flex();
+                #mixins > .flex-direction(column);
+                #mixins > .flex-justify-content(space-around);
 
                 // Invert button colors in here
                 ul.link-list .btn {
-                    color: white;
-                    border-color: white;
-                    &:hover { color: @content_textColor !important; }
-                    &:hover { border: 2px solid white !important; }
-                    &:visited { color: white; }
-                    &:after { border-color: white; background-color: white; }
+                    #mixins > .btn-style(#FFFFFF, @content_textColor);
                 }
 
                 .tagline {
@@ -202,44 +197,7 @@ ul.link-list {
     }
 
     .btn {
-        .ignore-default-link-style;
-
-        color: @content_textColor;
-        padding: 0.25rem;
-        margin: 0.25rem 0;
-        border: 2px solid @content_textColor;
-        overflow: hidden;
-        -webkit-transform: translateZ(0); // "Hack" to force a new animation rendering layer because Chrome
-        transform: translateZ(0);
-        .border-radius (8px);
-        .transition (~"color 0.25s");
-        .transition-delay (~"0.125s");
-
-        &:after {
-            display: block;
-            content: "";
-            background-color: @content_textColor;
-            z-index: -1;
-            position: absolute;
-            margin: 0;
-            width: 100%;
-            height: 150%;
-            top: 100%;
-            left: 0;
-            right: 0;
-            .transition (~"top 0.5s");
-        }
-
-        &:hover {
-            color: #FFFFFF !important; // FF ignores this color rule after the transition is complete, unless it's marked as !important (I really don't know why)
-
-            &:after {
-                top: -10px;
-            }
-        }
-
-        &:hover { border: 2px solid @content_textColor !important; }
-        &:visited { color: @content_textColor; }
+        #mixins > .btn-style(@content_textColor, #FFFFFF);
     }
 }
 

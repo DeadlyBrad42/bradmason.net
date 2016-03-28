@@ -1,125 +1,169 @@
 // main: portfolio.less
 /****** Mixins ****************************************************************/
 
-// Animations & Transistions
-.animation (@value) {
-    -webkit-animation: @value;
-    -moz-animation: @value;
-    -o-animation: @value;
-    animation: @value;
-}
+#mixins {
+    // Classes
+    .btn-style (@textColor, @hoverTextColor) {
+        #mixins > .ignore-default-link-style;
 
-.animation-delay (@value) {
-    -webkit-animation-delay: @value;
-    -moz-animation-delay: @value;
-    -o-animation-delay: @value;
-    animation-delay: @value;
-}
+        color: @textColor;
+        padding: 0.25rem;
+        margin: 0.25rem 0;
+        border: 2px solid @textColor;
+        overflow: hidden;
+        -webkit-transform: translateZ(0); // "Hack" to force a new animation rendering layer because Chrome
+        transform: translateZ(0);
+        #mixins > .border-radius (8px);
+        #mixins > .transition (~"color 0.25s");
+        #mixins > .transition-delay (~"0.125s");
 
-.animation-play-state (@value) {
-    -webkit-animation-play-state: @value;
-    -moz-animation-play-state: @value;
-    -o-animation-play-state: @value;
-    animation-play-state: @value;
-}
+        &:after {
+            display: block;
+            content: "";
+            background-color: @textColor;
+            z-index: -1;
+            position: absolute;
+            margin: 0;
+            width: 100%;
+            height: 150%;
+            top: 100%;
+            left: 0;
+            right: 0;
+            #mixins > .transition (~"top 0.5s");
+        }
 
-.transition (@value) {
-    -webkit-transition: @value;
-    -moz-transition: @value;
-    -o-transition: @value;
-    transition: @value;
-}
+        &:hover {
+            color: @hoverTextColor !important; // FF ignores this color rule after the transition is complete, unless it's marked as !important (I really don't know why)
 
-.transition-delay (@value) {
-    -webkit-transition-delay: @value;
-    -moz-transition-delay: @value;
-    -o-transition-delay: @value;
-    transition-delay: @value;
-}
+            &:after {
+                top: -10px;
+            }
+        }
 
-// Borders & Box Model
-.border-radius (@value) {
-    -webkit-border-radius: @value;
-    -moz-border-radius: @value;
-    -o-border-radius: @value;
-    border-radius: @value;
-}
-
-.box-sizing (@value) {
-    -webkit-box-sizing: @value;
-    -moz-box-sizing: @value;
-    -o-box-sizing: @value;
-    box-sizing: @value;
-}
-
-// Flexbox
-.display-flex() {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-}
-
-.flex-justify-content(@value) {
-    -ms-justify-content: @value;
-    -webkit-justify-content: @value;
-    justify-content: @value;
-}
-
-.flex-direction(@value) {
-    -webkit-flex-direction: @value;
-    -ms-flex-align: @value;
-    flex-direction: @value;
-}
-
-.flex-align-items(@value) {
-    -webkit-flex-align: @value;
-    -ms-flex-align: @value;
-    -webkit-align-items: @value;
-    align-items: @value;
-}
-
-.flexbox-align-self(@value) {
-    -webkit-align-self: @value;
-    align-self: @value;
-}
-
-.flexbox-justify-content(@value) {
-    -webkit-justify-content: @value;
-    justify-content: @value;
-}
-
-.flexbox-wrap(@value) {
-    -webkit-flex-wrap: @value;
-    flex-wrap: @value;
-}
-
-// Misc. & Utility
-.ignore-default-link-style {
-    // Used to override the default linking style
-    border: initial;
-    .transition (all 0 ease 0);
-
-    &:hover { border: initial; }
-    &:after { display: none; }
-}
-
-.disable-user-select {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.clearfix {
-    *zoom: 1;
-    &:before,
-    &:after {
-        content: " ";
-        display: table;
+        &:hover { border: 2px solid @textColor !important; }
+        &:visited { color: @textColor; }
     }
-    &:after {
-        clear: both;
+
+    .ignore-default-link-style {
+        // Used to override the default linking style
+        border: initial;
+        .transition (all 0 ease 0);
+
+        &:hover { border: initial; }
+        &:after { display: none; }
+    }
+
+    // Utilities - Animations & Transistions
+    .animation (@value) {
+        -webkit-animation: @value;
+        -moz-animation: @value;
+        -o-animation: @value;
+        animation: @value;
+    }
+
+    .animation-delay (@value) {
+        -webkit-animation-delay: @value;
+        -moz-animation-delay: @value;
+        -o-animation-delay: @value;
+        animation-delay: @value;
+    }
+
+    .animation-play-state (@value) {
+        -webkit-animation-play-state: @value;
+        -moz-animation-play-state: @value;
+        -o-animation-play-state: @value;
+        animation-play-state: @value;
+    }
+
+    .transition (@value) {
+        -webkit-transition: @value;
+        -moz-transition: @value;
+        -o-transition: @value;
+        transition: @value;
+    }
+
+    .transition-delay (@value) {
+        -webkit-transition-delay: @value;
+        -moz-transition-delay: @value;
+        -o-transition-delay: @value;
+        transition-delay: @value;
+    }
+
+    // Utilities - Borders & Box Model
+    .border-radius (@value) {
+        -webkit-border-radius: @value;
+        -moz-border-radius: @value;
+        -o-border-radius: @value;
+        border-radius: @value;
+    }
+
+    .box-sizing (@value) {
+        -webkit-box-sizing: @value;
+        -moz-box-sizing: @value;
+        -o-box-sizing: @value;
+        box-sizing: @value;
+    }
+
+    // Utilities - Flexbox
+    .display-flex() {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .flex-justify-content(@value) {
+        -ms-justify-content: @value;
+        -webkit-justify-content: @value;
+        justify-content: @value;
+    }
+
+    .flex-direction(@value) {
+        -webkit-flex-direction: @value;
+        -ms-flex-align: @value;
+        flex-direction: @value;
+    }
+
+    .flex-align-items(@value) {
+        -webkit-flex-align: @value;
+        -ms-flex-align: @value;
+        -webkit-align-items: @value;
+        align-items: @value;
+    }
+
+    .flexbox-align-self(@value) {
+        -webkit-align-self: @value;
+        align-self: @value;
+    }
+
+    .flexbox-justify-content(@value) {
+        -webkit-justify-content: @value;
+        justify-content: @value;
+    }
+
+    .flexbox-wrap(@value) {
+        -webkit-flex-wrap: @value;
+        flex-wrap: @value;
+    }
+
+    // Misc.
+    .disable-user-select {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    .clearfix {
+        *zoom: 1;
+        &:before,
+        &:after {
+            content: " ";
+            display: table;
+        }
+        &:after {
+            clear: both;
+        }
     }
 }

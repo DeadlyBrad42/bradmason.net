@@ -29,7 +29,7 @@ h1 {
     margin-bottom: 2.5rem;
 
     a {
-        .ignore-default-link-style;
+        #mixins > .ignore-default-link-style;
         border: none !important;
         &:hover { border: none !important };
     }
@@ -49,7 +49,7 @@ a {
     border-bottom: 1px dotted @content_textColor;
     position: relative;
     display: inline-block;
-    .transition(border 0.5s);
+    #mixins > .transition(border 0.5s);
 
     &:after {
         content: "";
@@ -62,7 +62,7 @@ a {
         background-color: @content_textColor;
         margin-left: 50%;
         margin-top: 1px;
-        .transition (~"width 0.5s, margin-left 0.5s");
+        #mixins > .transition (~"width 0.5s, margin-left 0.5s");
     }
 
     &:hover {
