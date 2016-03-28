@@ -9,8 +9,8 @@
 
     // Intialize Vue components
     Vue.component('vue-description', descriptionComponent);
-    Vue.component('vue-link', linkListComponent);
-    Vue.component('vue-project', projectListComponent);
+    Vue.component('vue-link', linkComponent);
+    Vue.component('vue-project', projectComponent);
     Vue.component('vue-card', cardComponent);
 
     // Start Vue
@@ -48,4 +48,4 @@
     // Export the app
     exports.app = app;
 
-})(window, Vue, window.router, window.dataStore, window.vueEngine, window.descriptionComponent, window.linkListComponent, window.projectListComponent, window.cardComponent);
+})(window, Vue, window.router, window.dataStore, window.vueEngine, window.descriptionComponent, window.linkComponent, window.projectComponent, window.cardComponent);
