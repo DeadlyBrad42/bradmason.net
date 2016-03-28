@@ -7,3 +7,7 @@ styles/portfolio.css
 # Actual temp files
 *.tmp
 *.temp
+
+# Ignored folders of dependencies
+bower_components/
+node_modules/
