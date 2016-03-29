@@ -1,0 +1,76 @@
+// main: portfolio.less
+/****** Standard element styles ***********************************************/
+
+/* Quick-n-dirty reset */
+* {
+    margin: 0;
+    padding: 0;
+    ul { list-style-position: inside; }
+}
+
+html {
+    font-family: "Noto Sans", Helvetica, Arial, Verdana, sans-serif;
+    font-size: 1.35em;
+    line-height: 1.65em;
+    height: 100%;
+}
+
+body {
+    color: @content_textColor;
+    // background-color: @content_backgroundColor;  // Set to @meta_backgroundColor because Firefox doesn't render .avatar-wrapper correctly
+    background-color: @meta_backgroundColor;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.15);
+    height: 100%;
+}
+
+h1 {
+    font-size: 1.75rem;
+    line-height: 100%;
+    margin-bottom: 2.5rem;
+
+    a {
+        #mixins > .ignore-default-link-style;
+        border: none !important;
+        &:hover { border: none !important };
+    }
+}
+h2 {
+    margin-bottom: 0.75rem;
+}
+
+p {
+    line-height: 175%;
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: @content_textColor;
+    border-bottom: 1px dotted @content_textColor;
+    position: relative;
+    display: inline-block;
+    #mixins > .transition(border 0.5s);
+
+    &:after {
+        content: "";
+        width: 0%;
+        height: 2px;
+        display: inline-block;
+        position: absolute;
+        bottom: -1.5px;
+        left: 0;
+        background-color: @content_textColor;
+        margin-left: 50%;
+        margin-top: 1px;
+        #mixins > .transition (~"width 0.5s, margin-left 0.5s");
+    }
+
+    &:hover {
+        border-bottom: 1px dotted transparent !important;
+
+        &:after {
+            width: 100%;
+            margin-left: 0%;
+        }
+    }
+}

@@ -1,0 +1,210 @@
+// main: portfolio.less
+/****** Components ************************************************************/
+
+// Konami Code
+.avatar-wrapper figure {
+    overflow: hidden;
+    figcaption {
+        position: relative;
+
+        .specs {
+            position: absolute;
+            top: -100px;
+            left: (-@avatar_konami_spec_width * (1/2)) + (@avatar_width * (1/2));
+            #mixins > .transition (~"top 0.5s ease-in-out");
+        }
+        .dwi {
+            position: absolute;
+            top: 150px;
+            left: (-@avatar_konami_dwi_width * (1/2)) + (@avatar_width * (1/2));
+            #mixins > .transition (~"top 0.5s ease-in-out");
+        }
+
+        body.konami & {
+            .specs {
+                top: 49px;
+            }
+            .dwi {
+                top: 10px;
+            }
+        }
+    }
+}
+
+.avatar-wrapper {
+    height: @avatar_diameter_normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    figure {
+        width: @avatar_diameter_normal;
+        height: @avatar_diameter_normal;
+        background-color: #02B1F1;
+        background-image: url('../assets/img/bg.png');
+        background-repeat: repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        border: 0.2em solid @content_imgBorderColor;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        #mixins > .transition(~"width 1s, height 1s");
+        #mixins > .animation (~"animatedCircleBackground 1.5s linear infinite");
+        #mixins > .animation-play-state (~"paused");
+
+        figcaption {
+            display: flex;
+            align-items: center;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        &:hover {
+            width: @avatar_diameter_hover;
+            height: @avatar_diameter_hover;
+            #mixins > .animation-play-state (~"running");
+
+            figcaption {
+                #mixins > .animation(~"animatedPictureFloat 1.5s linear infinite");
+            }
+        }
+    }
+
+    @media @phone-or-smaller {
+        height: inherit;
+        padding: 0.5rem;
+
+        figure {
+            height: 50px;
+            width: 50px;
+            animation: none !important;
+            transition: none !important;
+            background-size: 5%;
+
+            figcaption {
+                animation: none !important;
+
+                img {
+                    width: 75%;
+                    margin: auto;
+                }
+
+                img.specs, img.dwi { display: none; }
+            }
+        }
+    }
+}
+
+article {   // Used as a "card"
+    background-color: @card_background;
+    padding: 1em;
+    border: 1px solid @card_border;
+    box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.15);
+}
+
+ul.project-list {
+    list-style: none;
+    #mixins > .display-flex();
+    #mixins > .flex-justify-content(space-around);
+    #mixins > .flex-align-items(center);
+    #mixins > .flexbox-wrap(wrap);
+
+    li {
+        margin: 0.5rem 0.5rem 1.0rem;
+
+        .proj-title {
+            #mixins > .display-flex();
+            #mixins > .flex-justify-content(space-between);
+
+            time {
+                font-style: italic;
+                font-size: 0.8rem;
+            }
+        }
+
+        .proj-tile {
+            width: initial;
+            height: initial;
+            border: none;
+
+            img {
+                width: 100%;
+                border: 1px solid @content_textColor;
+            }
+        }
+
+        @media @desktop-or-larger {
+            .proj-tile {
+                display: block;
+                position: relative;
+                width: 450px;
+                height: 300px;
+                border: 1px solid @content_textColor;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                ul.link-list { margin: 0; }
+            }
+
+            .shade {
+                color: white;
+                text-align: center;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: fade(@meta_backgroundColor, 75%);
+                opacity: 0.0;
+                transform: scale(1.5, 1.5);
+                #mixins > .transition(~"transform 0.25s ease-in-out, opacity 0.25s ease-in-out");
+                #mixins > .display-flex();
+                #mixins > .flex-direction(column);
+                #mixins > .flex-justify-content(space-around);
+
+                // Invert button colors in here
+                ul.link-list .btn {
+                    #mixins > .btn-style(#FFFFFF, @content_textColor);
+                }
+
+                .tagline {
+                    padding: 0.5rem;
+                }
+            }
+
+            &:hover {
+                .shade {
+                    opacity: 1.0;
+                    transform: scale(1.0, 1.0);
+                }
+            }
+        }
+    }
+}
+
+ul.link-list {
+    list-style: none;
+    margin-bottom: 1.25em;
+
+    li {
+        display: inline;
+    }
+
+    .btn {
+        #mixins > .btn-style(@content_textColor, #FFFFFF);
+    }
+}
+
+.sr-only {
+    clip: rect(0, 0, 0, 0);
+    position: absolute !important;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+}

@@ -1,0 +1,164 @@
+// main: portfolio.less
+/****** Layout ****************************************************************/
+
+div#wrapper {
+    padding-left: @meta_colWidth;
+
+    @media @phone-or-smaller {
+        padding-left: 0;
+    }
+}
+
+aside#meta {
+    color: @meta_textColor;
+    background-color: @meta_backgroundColor;
+    width: @meta_colWidth;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 2.0em 2.0em;
+    #mixins > .box-sizing(border-box);
+    box-shadow: 3px 0px 10px 1px rgba(0,0,0,0.15);
+
+    ul#nav-list {
+        border-bottom: 1px dotted @content_textColor;
+        border-top: 1px dotted @content_textColor;
+        list-style: none outside none;
+        margin: @meta_verticalMargin auto;
+
+        li {
+            display: inline-block;
+            margin: 0.5rem 0.25rem;
+        }
+    }
+
+    ul#social {
+        list-style: none outside none;
+        margin: @meta_verticalMargin auto;
+
+        li {
+            display: inline-block;
+            height: @social_size_hover;
+            width: @social_size_hover;
+
+            a {
+                #mixins > .ignore-default-link-style;
+                color: @social_color;
+                display: inline-block;
+                font-style: normal;
+                font-weight: normal;
+                font-variant: normal;
+                text-transform: none;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                display: inline-block;
+                width: @social_size_hover;
+                height: @social_size_hover;
+                line-height: @social_size_hover;
+                transform: scale(0.75);
+                font-size: 1.5rem;
+                #mixins > .transition (~"transform 0.5s ease");
+                #mixins > .border-radius (50%);
+
+                &:hover { transform: scale(1.0); }
+            }
+
+            &.twitter a {
+                background-color: @social_bgcolor_twitter;
+            }
+            &.github a {
+                background-color: @social_bgcolor_git;
+            }
+            &.tumblr a {
+                background-color: @social_bgcolor_blog;
+            }
+        }
+    }
+
+    a {
+        color: @meta_textColor;
+        border-bottom-color: @meta_textColor;
+        &:after { background-color: @content_imgBorderColor; }
+    }
+
+    @media @phone-or-smaller {
+        position: initial;
+        width: 100%;
+        padding: 0.5rem;
+        #mixins > .display-flex();
+        #mixins > .flex-align-items(center);
+        #mixins > .flex-justify-content(space-around);
+        box-shadow: 0 3px 10px 1px rgba(0,0,0,0.15);
+        z-index: 1;
+
+        #me {
+            #mixins > .display-flex();
+            #mixins > .flex-align-items(center);
+
+            h1 {
+                margin: 0;
+                display: inline-block;
+            }
+
+            .avatar-wrapper { order: -1; }
+        }
+
+        nav {
+            #mixins > .display-flex();
+            #mixins > .flex-direction(column-reverse);
+        }
+
+        ul#nav-list, ul#social {
+            margin: 0;
+            li { margin: 0; }
+        }
+
+        ul#nav-list {
+            border: 0;
+            li { margin: 0 0.5rem; }
+        }
+    }
+
+    @media @tiny-screen-or-smaller {
+        ul#nav-list li { margin: 0; }
+
+        ul#social li {
+            width: 40px;
+            height: 40px;
+
+            a {
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                font-size: 1.25rem;
+            }
+        }
+    }
+}
+
+section#content {
+    min-height: 100vh;
+    background-color: @content_backgroundColor;
+    margin: 0 auto;
+    padding: 2.0rem;
+    #mixins > .box-sizing(border-box);
+
+    & > article {
+        max-width: @content_colMaxWidth;
+        margin: 0 auto 4.0rem;
+    }
+
+    &:after {
+        content: "";
+        width: 75%;
+        display: block;
+        margin: 0 auto;
+        border-bottom: 1px solid @card_border;
+    }
+
+    @media @phone-or-smaller {
+        padding: 1rem 0.5rem;
+    }
+}
