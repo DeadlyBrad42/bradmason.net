@@ -48,5 +48,6 @@ module.exports = function(grunt) {
 
     // Default task(s).
     grunt.registerTask('default', ['less:build', 'express:web']);
+    grunt.registerTask('build', ['less:build']);
     grunt.registerTask('dev', ['less:build', 'express:dev', 'watch']);
 };
