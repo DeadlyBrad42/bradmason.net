@@ -7,7 +7,7 @@ module.exports = function(grunt) {
         less: {
             build: {
                 files: {
-                    "./styles/portfolio.css": "./styles/portfolio.less" // destination file and source file
+                    './styles/portfolio.css': './styles/portfolio.less' // 'destination file': 'source file'
                 },
                 options: {
                     compress: true,
@@ -22,14 +22,31 @@ module.exports = function(grunt) {
                 spawn: false,
                 debounceDelay: 250
             }
+        },
+        express: {
+            options: {
+                // Override defaults here
+            },
+            web: {
+                options: {
+                    script: 'server.js',
+                    output: ''
+                }
+            },
+            dev: {
+                options: {
+                    script: 'server.js',
+                }
+            }
         }
     });
 
     // Load tasks
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-express-server');
 
     // Default task(s).
-    grunt.registerTask('default', ['less:build']);
-    grunt.registerTask('dev', ['less:build', 'watch']);
+    grunt.registerTask('default', ['less:build', 'express:web']);
+    grunt.registerTask('dev', ['less:build', 'express:dev', 'watch']);
 };
