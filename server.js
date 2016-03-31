@@ -14,6 +14,11 @@ app.get('/data.json', function(req, res) {
    res.sendFile(__dirname + '\\data.json');
 });
 
+/* serves favicon */
+app.get('/favicon.ico', function(req, res) {
+   res.sendFile(__dirname + '\\favicon.ico');
+});
+
  /* serve asset files */
 app.use('/assets', express.static(__dirname + '/assets'));
 
