@@ -50,6 +50,23 @@
             "title": "Projects",
             "projects": [
                 {
+                    "title": "StrangeThing",
+                    "dateTitle": "October 2016",
+                    "dateTime": "10-2016",
+                    "tagline": "An Arduino-powered Stranger Things wall display",
+                    "imageUrl": "assets/img/projects/strangething/strangething.gif",
+                    "text": [
+                        "An Arduino-powered Stranger Things wall display"
+                    ],
+                    "links": [
+                        {
+                            "text": "More Info & Source",
+                            "url": "https://github.com/DeadlyBrad42/StrangeThing",
+                            "type": "source"
+                        }
+                    ]
+                },
+                {
                     "title": "SpriteStitcher",
                     "dateTitle": "September 2014",
                     "dateTime": "09-2014",
