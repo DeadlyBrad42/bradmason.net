@@ -16,18 +16,26 @@ Experienced frontend software engineer with a strong passion for building next-g
 * Technologies: RESTful API design, Authentication & Authorization (JWT, OAuth, Cognito), WebSockets, Responsive Design, Cross-browser compatibility
 
 ## Experience
-### Principal Software Engineer / “Principal Web Robot” **@ Robots & Pencils Inc.** *(December 2018 - February 2025)*
-* Delivered high-quality interactive web applications for clients across education, healthcare, and consumer technology sectors, utilizing frameworks such as React, Angular, & Vue.
-* Collaborated with Project Leadership to define requirements, scope work, and provide accurate development estimates, ensuring projects met budget and timeline expectations.
-* Designed and developed modular, reusable, and accessible frontend components, contributing to shared libraries and streamlining development processes across multiple projects.
-* Optimized applications for performance, accessibility, & SEO, achieving measurable improvements in user experience and page load speed for client-facing applications.
-* Built hybrid React applications with a focus on interactivity, usability, and scalability, enhancing customer engagement and satisfaction and improving codebase maintainability.
-* Utilized Cypress for end-to-end testing, SonarQube for static code analysis, and eslint for linting, resulting in a reduction in bugs reported during development & improving release readiness.
-* Mentored team members throughout the development lifecycle, providing technical guidance on frontend best practices, modern frameworks, and performance optimization.
-* Fostered a learning culture through conducting knowledge-sharing sessions, code reviews, and pair programming exercises, strengthening frontend expertise across the team.
-* Provided career and professional development guidance, helping teammates navigate growth opportunities, refine technical communication, and improve problem-solving approaches.
-* Played a key role in the hiring process by conducting technical interviews and mentoring team members new to interviewing, providing constructive feedback to improve their skills and contributing back to internal hiring documentation.
-* Contributed to internal initiatives, including the creation of shared frontend component libraries to speed up new project development, and conducting technical project demos of project successes to foster collaboration and knowledge sharing across clients.
+### UI Engineering Consultant **@ Slalom, Inc.** *(September 2025 - December 2025)*
+* Worked as a UI engineering consultant on a large React and TypeScript application, primarily focusing on building a shared component library to support frontend modernization efforts.
+* Contributed to the design and implementation of an opinionated, MUI-based UI library, intentionally limiting ad-hoc styling APIs to encourage consistent usage of shared design patterns.
+* Designed and implemented the design-token pipeline from Figma through Style Dictionary, defining token parsing, templates, and outputs to generate CSS variables, dynamic MUI themes, and stylesheets for Highcharts & React Flow.
+* Developed and documented 10–15 core UI components, with a focus on highly customized and accessible form components, leveraging advanced MUI features such as slots to enforce consistent behavior and styling.
+* Authored comprehensive Storybook documentation and unit tests for all components, and helped enable package versioning and publishing to the client’s internal private npm registry.
+* Contributed to initial application refactors and migration documentation, and supported code quality and release readiness through unit testing and static analysis using SonarQube.
+
+### Principal Software Engineer / "Principal Web Robot" **@ Robots & Pencils Inc.** *(December 2018 - February 2025)*
+* Worked as a senior frontend engineer on client projects across education, healthcare, and consumer technology, often acting as the most experienced frontend developer on small and medium-sized teams.
+* Frequently served in a technical lead capacity, guiding frontend implementation and patterns while remaining hands-on with feature development using React, Angular, and Vue.
+* Contributed to project discovery, estimation, and planning, collaborating with project leadership to assess scope, feasibility, and timelines prior to project kickoff.
+* Had significant influence over technical decisions including framework selection, architectural approaches, state management, testing strategies, and performance considerations, supported by research, documentation, and proof-of-concept work.
+* Designed and built modular, reusable, and accessible frontend components using modern JavaScript and TypeScript, contributing to shared libraries and common patterns used across projects.
+* Developed interactive and scalable React and Angular applications, including hybrid architectures, with a focus on usability, maintainability, and long-term scalability, and optimized them for performance, accessibility, and SEO.
+* Mentored 6–8 junior frontend developers through regular 1:1s, code reviews, and design discussions, providing guidance on modern frameworks, performance optimization, code quality, and frontend best practices.
+* Collaborated closely with designers, QA, and project managers to clarify requirements, prioritize work, and ensure technical approaches aligned with project goals and constraints.
+* Utilized Cypress for end-to-end testing, SonarQube for static code analysis, and ESLint for linting, helping reduce defects during development and improve release readiness.
+* Improved project documentation, onboarding materials, and development processes, and regularly assisted other teams by providing frontend expertise, architectural guidance, and occasional incident response support.
+* Helped foster a strong engineering culture through knowledge sharing, pair programming, and organization-wide frontend discussions, while also contributing to hiring by conducting technical interviews and supporting interviewer evaluation practices.
 
 ### Software Engineer **@ Lynx Technology Partners, Inc.** *(June 2017 - November 2018)*
 * Built dynamic single-page web applications (SPA) using the Angular framework, delivering responsive and user-friendly interfaces to convey complex data.
