@@ -23,7 +23,6 @@ This page's source is available at https://github.com/DeadlyBrad42/bradmason.net
     <title>Brad Mason</title>
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles/portfolio.css" title="Style" type="text/css" media="screen" />
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Noto+Sans" type="text/css" media="screen" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
@@ -40,21 +39,8 @@ This page's source is available at https://github.com/DeadlyBrad42/bradmason.net
         window.gaLog = function(page){ga('send', 'pageview', page);};
     </script>
 
-    <!-- Libs -->
-    <script type="text/JavaScript" defer src="scripts/lib/bower_components/vue/dist/vue.min.js"></script>
-    <script type="text/JavaScript" defer src="scripts/lib/router.js"></script>
-    <script type="text/JavaScript" defer src="scripts/lib/konami.js"></script>
-
-    <!-- Components -->
-    <script type="text/JavaScript" defer src="scripts/components/descriptionComponent.js"></script>
-    <script type="text/JavaScript" defer src="scripts/components/linkComponent.js"></script>
-    <script type="text/JavaScript" defer src="scripts/components/projectComponent.js"></script>
-    <script type="text/JavaScript" defer src="scripts/components/cardComponent.js"></script>
-
     <!-- App -->
-    <script type="text/JavaScript" defer src="scripts/dataStore.js"></script>
-    <script type="text/JavaScript" defer src="scripts/vueEngine.js"></script>
-    <script type="text/JavaScript" defer src="scripts/app.js"></script>
+    <script type="module" src="/src/app.js"></script>
 
 </head>
 <body id="page-top">
